@@ -1,0 +1,24 @@
+%!TEX root = Slic3r-Manual.tex
+
+\section{\'Etalonage}
+\label{calibration}
+\index{etalonage}
+\index{calibration}
+
+Avant m\^eme de tenter la premi\`ere impression, il est essentiel que l'imprimante soit correctement calibr\'ee. Sauter cette \'etape ou se pr\'ecipiter se traduira par de la frustration et un \'echec de l'impression, il est donc important de prendre le temps de s'assurer que la machine soit correctement \'etalonn\'ee.
+
+Chaque machine peut avoir sa propre proc\'edure d'\'etalonnage et de ce manuel ne tentera pas de couvrir toutes les variantes. Au lieu de cela, voici une liste des principaux points qui doivent \^etre v\'erifi\'es.
+
+\begin{itemize}
+\item Le chassis est stable et correctement align\'e.
+\item Les courroies sont tendus.
+\item Le lit est de niveau par rapport \`a la trajectoire de l'extrudeuse.
+\item Le filament se d\'eroule librement depuis la bobine, sans causer trop de tension sur l'extrudeuse.
+\item Le courant des moteurs pas \`a pas est r\'egl\'e crrectement.
+\item Les param\`etres du microprogramme sont corrects, notamment: les vitesses et acc\'el\'erations des axes de d\'eplacement; le contr\^ole de la temp\'erature; les capteurs de fin de courses; le sens de rotation des moteurs.
+\item L'extrudeuse est \'etalonn\'e dans le micrologiciel avec le bon nombre de pas par mm pour le filament.
+\end{itemize}
+
+Le nombre de pas par mm de l'extrudeuse est essentiel. Slic3r s'attend \`a ce que la machine produise exactement la quantit\'e d\'efinie de filament. Trop se traduira par des d\'ebordement et autres imperfections. Trop peu se traduira par des des espaces et un manque d'adh\'erence entre les couches.
+
+R\'ef\'erez vous \`a la documentation de l'imprimante et/ou aux ressources de la communaut\'e de l'impression 3D pour plus de d\'etails sur la meilleure fa\c{c}on d'\'etalonner une machine particuli\`ere.
