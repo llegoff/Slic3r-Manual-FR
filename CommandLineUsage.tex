@@ -1,17 +1,18 @@
 %!TEX root = Slic3r-Manual.tex
 
-\section{Command Line Usage} % (fold)
+\section{Utilisation en Ligne de Commande} % (fold)
 \label{sec:command_line_usage}
 \index{command line}
+\index{ligne de commande}
 \index{scripting}
 
-Slic3r can also be used from the command line instead of via the GUI, as part of a script, or as part of another tool, such as Printrun\footnote{https://github.com/kliment/Printrun}.
+Slic3r peut également être utilisé à partir de la ligne de commande à la place de l'interface graphique, dans le cadre d'un script, ou dans le cadre d'un autre outil, comme Printrun\footnote{https://github.com/kliment/Printrun}.
 
-All options found in the GUI can be used from the command line in the form of switch parameters.  The latest version of these are given below, and the most up-to-date information can be found by issuing the command: \par\texttt{slic3r.pl --help}
+Toutes les options présentes dans l'interface graphique peuvent être utilisées à partir de la ligne de commande sous la forme de paramètres de commutation. La dernière version de ceux-ci sont donnés ci-dessous, et les informations les plus à jour, peut être trouvé en tapant la commande: \par\texttt{slic3r.pl --help}
 
-Preset configurations can be loaded from a .ini file using the \texttt{--load} option, and options can be overridden further on the command line, e.g. \par\texttt{slic3r.pl --load config.ini --layer-height 0.25 file.stl}
+Des configurations préétablies peuvent être chargés à partir d'un fichier ini. en utilisant le paramètre \texttt{--load}, et les paramètres peuvent être remplacées plus loin sur la ligne de commande, par exemple \par\texttt{slic3r.pl --load config.ini --layer-height 0.25 file.stl}
 
-\subsection{Command Line Options} % (fold)
+\subsection{Paramètres de Ligne de Commande} % (fold)
 \label{sub:command_line_options}
 
 \tiny
