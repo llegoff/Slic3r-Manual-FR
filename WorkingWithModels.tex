@@ -1,96 +1,102 @@
 %!TEX root = Slic3r-Manual.tex
-\section{Working with Models}
+\section{Travailler avec les modèles 3D}
 \label{sub:working_with_models}
 \index{models}
+\index{modèles 3D}
 
-Yet another step lies between now and the first print - a model has to found and then sliced.
+Il reste encore une étape avant la prmière impression: obtenir un modèle 3D et le "trancher".
 
-\subsection{Model Formats} % (fold)
+\subsection{Formats de Modèles 3D} % (fold)
 \label{sub:model_formats}
 \index{STL}
 \index{AMF}
 \index{OBJ}
 
-Slic3r accepts the following file types.
+Slic3r accepte les types de fichiers suivants.
 
 \begin{itemize}
-	\item STereoLithography (STL) files can come from a wide variety of sources and are now a de facto standard in 3D printing.  The files simply describe the surface geometry of a 3D object without any additional information (such as colour or material), and it is this simplicity that has probably made the format ubiquitous.
-	\item Wavefront OBJ files are an open format originally used in an animation application from Wavefront Technologies, but has since been adopted by the wider 3D modelling community.  It is similar to the STL format.
-	\item Additive Manufacturing File Format (AMF) was developed in response to the limited nature of the STL format.  In addition to describing the geometry of the 3D model it can also describe colours and materials, as well as more complex attributes, such as gradient mixes and multiple object arrangements (constellations).  Whilst the format is deemed a standard it has yet to be widely adopted in the 3D maker community.
+	\item Les fichiers STéréolithographique (STL) peuvent provenir d'une grande variété de sources et sont maintenant un standard de facto dans l'impression 3D. Les fichiers décrivent simplement la géométrie de la surface d'un objet 3D sans aucune information supplémentaire (comme la couleur ou la matière), et c'est cette simplicité qui a probablement fait le format omniprésent.
+	\item Le type de fichier Wavefront OBJ est un format ouvert utilisé à l'origine dans une application d'animation de Wavefront Technologies, mais a depuis été adoptée par la communauté de la modélisation 3D. Il est similaire au format STL.
+	\item Le format de fichier AMF (Additive Manufacturing File Format) a été développé en réponse au caractère limité du format STL. En plus de décrire la géométrie du modèle 3D, il peut également décrire les couleurs et les matériaux, ainsi que des attributs plus complexes, tels que les mélanges dégradé et de multiples arrangements d'objets (constellations). Alors que le format est considéré comme un standard, il reste à être largement adoptée dans le milieu de la machine 3D.
 \end{itemize}
 % subsection model_formats (end)
 
-\subsection{Finding Models} % (fold)
+\subsection{Trouver des Modèles 3D} % (fold)
 \label{sub:finding_models}
 \index{models!finding}
+\index{modèles!trouver}
 
-The 3D model files may come from an online repository, such as Thingiverse\footnote{\url{http://www.thingiverse.com}} or GrabCAD\footnote{\url{http://grabcad.com}}, or be created from a CAD program, such as FreeCAD\footnote{\url{http://sourceforge.net/projects/free-cad}}, Sketchup\footnote{\url{http://www.sketchup.com}}, or OpenSCAD\footnote{\url{http://www.openscad.org}}, or an online CAD tool such as Shapesmith\footnote{\url{http://shapesmith.net}}.
+Les fichiers de modèle 3D peuvent provenir d'un dépôt en ligne, tels que Thingiverse\footnote{\url{http://www.thingiverse.com}} ou GrabCAD\footnote{\url{http://grabcad.com}}, ou être créée à partir d'un programme de CAO, comme FreeCAD\footnote{\url{http://sourceforge.net/projects/free-cad}}, Sketchup\footnote{\url{http://www.sketchup.com}}, ou OpenSCAD\footnote{\url{http://www.openscad.org}}, ou un outil de CAO en ligne tels que Shapesmith\footnote{\url{http://shapesmith.net}}.
 
-You may wish to view the files before slicing and there are many free applications available, one of which is Meshlab\footnote{\url{http://www.meshlab.org}} - a comprehensive tool for viewing and working with 3D files.
+Vous souhaitez peut-être afficher les fichiers avant de trancher et il ya beaucoup d'applications disponibles, dont l'un est Meshlab\footnote{\url{http://www.meshlab.org}} - un outil complet pour la visualisation et la manipulation des fichiers 3D.
 
 \begin{figure}[H]
 \centering
 \includegraphics[keepaspectratio=true,width=0.75\textwidth]{working_with_models/shapesmith.png}
-\caption{Shapesmith online CAD tool.}
+\caption{Outil de CAO en ligne Shapesmith.}
 \label{fig:shapesmith}
 \end{figure}
 
 % subsection working_with_models (end)
 
 
-\subsection{Working with Plater} % (fold)
+\subsection{Utiliser la Surface de Travail} % (fold)
 \label{sub:working_with_plater}
 \index{Plater}
-Slic3r has a tool, called Plater, which allows one or more models to be loaded and arranged before being sliced.
+\index{Surface de Travail}
+Slic3r dispose d'un outil, appelé Plater, qui permet à un ou plusieurs modèles à être chargés et disposés avant d'être "tranchés".
 
 \begin{figure}[H]
 \centering
 \includegraphics[keepaspectratio=true,width=1\textwidth]{working_with_models/plater.png}
-\caption{Plater}
+\caption{Surface de Travail}
 \label{fig:plater}
 \end{figure}
 
-Once you have acquired a model, drag it onto the Plater window (or use the Add button below the file list) to load it into Slic3r.  In the figure below, the traditional RepRap Minimug\footnote{\url{http://www.thingiverse.com/thing:18357}} is loaded, and is viewed from above. The ring around the model is a skirt - a single perimeter, several millimeters away from the model, which is extruded first.  This is useful in making sure the plastic is flowing smoothly from the nozzle when the model is starting to be printed.
+
+Une fois que vous avez acquis un modèle, faites-le glisser sur l'onglet "Plater" (ou utilisez le bouton Add(Ajouter) dans le coin suppérieur gauche) pour le charger dans Slic3r. Dans la figure ci-dessous, la traditionnelle RepRap Minimug\footnote{\url{http://www.thingiverse.com/thing:18357}} is loaded, and is viewed from above. The ring around the model is a skirt - a single perimeter, several millimeters away from the model, which is extruded first.  This is useful in making sure the plastic is flowing smoothly from the nozzle when the model is starting to be printed.
 
 \begin{figure}[H]
 \centering
 \includegraphics[keepaspectratio=true,width=0.75\textwidth]{working_with_models/minimug_model.png}
-\caption{Minimug model.}
+\caption{Le Modèle Minimug.}
 \label{fig:minimug_model}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[keepaspectratio=true,width=1\textwidth]{working_with_models/plater_model_loaded.png}
-\caption{STL file loaded.}
+\caption{Fichier STL chargé.}
 \label{fig:plater_model_loaded}
 \end{figure}
 
-The model can be repositioned by dragging the representation of it on the left of the screen around the bed.  Note that the dimensions of the bed should match your printer, as given during the initial configuration above.
+Le modèle peut être repositionnée en le déplaçant sur la reprèsentation du lit à gauche de l'écran. Notez que les dimensions du lit doivent correspondre à votre imprimante, tel qu'elles sont données lors de la configuration initiale ci-dessus.
 
-On the right-hand side is the list of currently loaded files.  The buttons along the top of the file list allow you to arrange the models.
+Sur le côté droit il y a la liste des fichiers actuellement chargés. Les boutons situés en haut de la liste de fichier vous permettent d'organiser les modèles.
 \begin{itemize}
-	\item \textbf{More/Less}  - Adjust how many copies should be printed.
-	\item \textbf{45°/Rotate}  - Rotate the selected model around the Z axis, either in 45° increments clockwise or counter-clockwise, or by a given amount.
-	\item \textbf{Scale}  - Increase or decrease the size of the printed model.
-	\item \textbf{Split}  - Divides a model which consists of more than one part into it's constituent parts, allowing each one to be arranged individually.
+	\item \textbf{More/Less (plus/moins)}  - Régle le nombre de copies qui doit être imprimé.
+	\item \textbf{45°/Rotate (45°/rotation)}  - Fait pivoter le modèle sélectionné autour de l'axe Z, soit de 45 ° dans le sens horaire ou anti-horaire, ou par une valeur donnée.
+	\item \textbf{Scale (échelle)}  - Augmenter ou diminuer la taille du modèle imprimé.
+	\item \textbf{Split (dissocier)}  - Divise un modèle qui se compose de plus d'une partie en ses parties constituantes, ce qui permet à chacune d'être agencée individuellement.
 \end{itemize}
 
-The buttons along the bottom of the file list allow you to add, remove, auto-arrange, or export the models.
+
+Les boutons en haut à gauche, vous permettent d'ajouter, de supprimer, d'auto-organiser, ou d'exporter les modèles.
 \begin{itemize}
-	\item \textbf{Add}  - Opens a file dialog to add a model to the plater, as an alternative to dropping a file directly.
-	\item \textbf{Delete/Delete All}  - Remove one or all models from the plater.
-	\item \textbf{Autoarrange}  - Attempt to arrange the models to give the optimal layout.
-	\item \textbf{Export G-code}  - Starts slicing the model and produces a G-Code file.
-	\item \textbf{Export STL}  - Save the current set of models as a single STL file.
+	\item \textbf{Add (Ajouter)}  - Ouvre une boîte de dialogue pour ajouter un modèle à la surface de travail, c'est une alternative glissé/déposé du fichier sur la surface de travail.
+	\item \textbf{Delete/Delete All (Supprimer/Tout supprimer)}  - Retirer un ou tous les modèles de la surface de travail.
+	\item \textbf{Autoarrange}  - Essaye d'organiser les modèles pour obtenir l'agencement optimal.
+	\item \textbf{Export G-code}  - Démarre le "tranchage" du modèle, et produit un fichier G-code.
+	\item \textbf{Export STL}  - Sauvegarde un ensemble de modèle de la surface de travail dans un fichier STL unique.
 \end{itemize}
 
 
 % subsection working_with_plater (end)
 
-\subsection{Cleaning STLs} % (fold)
+\subsection{Réparer les fichiers STL} % (fold)
 \label{sub:cleaning_stls}
 \index{STL!cleaning}
-If the 3D mesh described in the model contains holes, or edges are misaligned (known as being non-manifold), then Slic3r may have problems working on it.  Slic3r will attempt to fix any problems it can, but some problems are out of its reach.  If the application complains that a model cannot be sliced correctly then there are several options available: see the chapter about Repairing Models.
+\index{STL!réparer}
+Si le maillage 3D décrit dans le modèle contient des trous, ou les bords ne sont pas alignés (connu comme étant non-manifold), puis Slic3r peut avoir des problèmes pour le traiter. Slic3r va tenter de résoudre les problèmesqu'il peut, mais certains problèmes sont hors de sa portée. Si l'application se plaint que le modèle ne peut pas être "tranché" correctement alors il ya plusieurs options possibles: voir le chapitre sur la Réparation des modèles.
 
 % subsection cleaning_stls (end)
