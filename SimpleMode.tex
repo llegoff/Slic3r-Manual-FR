@@ -1,131 +1,148 @@
 %!TEX root = Slic3r-Manual.tex
-\section{Simple Mode} % (fold)
+\section{Mode Simple} % (fold)
 \label{sec:simple_mode}
 \index{simple mode}
+\index{mode simple}
 
-Slic3r has two modes of operation, Simple and Expert. These may be chosen from the \texttt{Preferences} window (found under the \texttt{File} menu).
+Slic3r a deux modes de fonctionnement, Simple et Expert. Ceux-ci peuvent être choisis à partir de la fenêtre \texttt{Preferénces} (qui se trouve dans le menu  \texttt{File} (fichier) ).
 
 \begin{figure}[ht]
 \centering
 \includegraphics[width=0.3\textwidth]{simple_mode/preferences_general.png}
-\caption{Preferences.}
+\caption{Preférences.}
 \label{fig:preferences_general}
 \end{figure}
 
-Simple mode offers a reduced set of options, enough for the beginner to get started with.  Expert mode give more control over how Slic3r produces the G-code and will be looked at later.
+Le mode simple offre une gamme réduite de paramètres, suffisament pour que le débutant puisse commencer. Le mode expert donne plus de contrôle sur la manière dont Slic3r produit le G-code, celui-ci sera examiné plus tard.
 
-\subsection{Print Settings}
+\subsection{Paramètres d'Impression}
 \index{Print Settings}
+\index{paramètres d'impression}
 
-The \texttt{Print Settings} tab provides the opportunity to change settings related to the actual print.  Whereas the other tabs are changed rarely, the settings on this tab will be modified regularly, possibly for each model printed.
+L'onglet \texttt{Print Settings} (paramètres d'impression) 
+offre la possibilité de modifier les paramètres liés à l'impression réelle. Alors que les autres onglets sont modifiées moins souvent, les paramètres de cet onglet seront modifiés régulièrement, éventuellement pour chaque modèle imprimé.
 
 \begin{figure}[ht]
 \centering
 \includegraphics[width=\textwidth]{simple_mode/simple_mode_print_settings.png}
-\caption{Simple Mode: Print Settings.}
+\caption{Mode Simple: Paramètres d'impression.}
 \label{fig:simple_mode_print_settings}
 \end{figure}
 
-\paragraph{General.} % (fold)
+\paragraph{Général.} % (fold)
 \label{par:simple_general}
 \index{Print Settings!Layer height}
+\index{Paramètres d'impression!Epaisseur de couche}
 
-\texttt{Layer height} is the thickness of each layer, and it is the step along the vertical axis taken before extruding a new layer atop the previous one.  There are several factors that influence how high each layer should be:
+\texttt{Layer height} (épaisseur de couche) définit le déplacement sur l'axe vertical avant l'extrusion d'une nouvelle couche.  Il y a plusieurs facteurs qui influentsur la hauteur que la couche doit avoir:
 \begin{itemize}
-	\item \textbf{Desired resolution}  - Lower layer height should result in prints with less noticeable ribs or bands, as each layer is smaller.  Aesthetics plays a role here, but also the type of model, for example, a mechanical part may not need such a high resolution finish, whereas a presentation piece may do so.
-	\item \textbf{Print speed}  - Shorter layers will result in smoother prints but each print will take longer, simply because the extruder must trace the pattern more times.  A later goal will be to strike a balance between layer height, the speed of the printer, and the quality of the resulting print.
+	\item \textbf{Résolution Désirée}  - Une faible hauteur de couche devrait conduire à des impressions avec des nervures ou des bandes moins visibles, comme chaque couche est plus petite. L'esthétique joue ici un rôle, mais aussi le type de modèle, par exemple, une pièce mécanique peut ne pas avoir besoin d'une telle finition haute résolution, alors qu'une pièce de présentation peut en avoir besoin.
+	\item \textbf{Vitesse d'impression}  - Les couches plus fines produiront des impression lisses, mais chaque impression prendra plus de temps, tout simplement parce que l'extrudeuse doit tracer le motif plusieurs fois. Un des buts plus tard sera de trouver un équilibre entre la hauteur de couche, la vitesse de l'imprimante, et la qualité de l'impression qui en résulte.
 \end{itemize}
 \index{Print Settings!Perimeters}
-\texttt{Perimeters} defines the minimum number of vertical shells (i.e. walls) a print will have.  Unless the model requires single width walls it is generally recommended to have a minimum of two perimeters as this gives some insurance that if a section of the perimeter is not printed correctly then the second perimeter will help cover it.
+\index{Paramètres d'impression!Périmètres}
+\texttt{Perimeters} (Périmetres) définit le nombre minimum de coquilles verticales (c'est à dire les murs) que l'impression aura. À moins que le modèle ne nécessite qu'un seul mur, il est généralement recommandé d'avoir un minimum de deux périmètres car cela donne l'assurance que si une partie du périmètre ne s'imprime pas correctement alors le second périmètre permettra le de couvrir.
 
 \index{Print Settings!Solid layers}
-The upper and lowermost layers that sandwich the model are filled with a \texttt{Solid layers} pattern.  For the bottom layers the important factor to consider is how the surface will look should there be a mistake whilst laying down the first layer, and for this reason it is recommended to have at least two bottom layers.
+\index{Paramètres d'impression!Couches pleines}
+Les couches supérieure et inférieure qui prennent en sandwich le modèle sont remplis de motifs de \texttt{Solid layers} (couches pleines). Pour les couches inférieures (bottom) le facteur important à prendre en compte est la façon dont la surface aura l'air s'il y avait une anomalie, lors de l'impression de la première couche, c'est pour cette raison, qu'il est recommandé d'avoir au moins deux couches inférieures.
 
-A similar consideration is required for the top layers.  Because the intermediate layers are likely to be filled with a pattern set less than 100\% then the covering layers will have to bridge this pattern and this can require more than one pass to cover completely.
+Une prise en compte similaire est nécessaire pour les couches supérieures (top). Parce que les couches intermédiaires sont susceptibles d'être rempli d'un motif fixé à moins de 100\% , les couches de revêtement devront combler ce motif et cela peut nécessiter plus d'un passage pour le couvrir complètement.
 
 \begin{figure}[H]
 \centering
 \includegraphics[keepaspectratio=true,width=0.75\textwidth]{simple_mode/bad_top_infill.jpg}
-\caption{An example of insufficient top layers.}
+\caption{Un exemple de couches supérieures insuffisantes.}
 \label{fig:bad_top_infill}
 \end{figure}
 
-Another tip to consider: Setting the top solid layer to zero, and setting the infill also to zero, will result in a hollow receptacle, ideal for turning models into vases\footnote{http://slic3r.org/blog/tip-printing-vases} for example.  Here manipulating the settings within Slic3r can be used to generate different kinds of prints, and not only be used to control surface accuracy.
+Une autre astuce à considérer: Régler la couche pleine supérieure (top solid layer) à zéro, et régler le remplissage également à zéro, produira un récipient , idéal pour transformer les modèles en vases\footnote{http://slic3r.org/blog/tip-printing-vases} par exemple. Ici la modification des paramètres peuvent être utilisés dans Slic3r pour générer différents types de impressions, et pas seulement pour contrôler la précision de surface.
 
 \begin{figure}[H]
 \centering
 \includegraphics[keepaspectratio=true,width=0.75\textwidth]{simple_mode/solid_layers_vases.png}
-\caption{Creating a vase from a solid model.}
+\caption{Création d'un vase à partir d'un modèle solide.}
 \label{fig:solid_layers_vases}
 \end{figure}
 
 % paragraph general (end)
 
-\paragraph{Infill.} % (fold)
+\paragraph{Remplissage. (Infill)} % (fold)
 \label{par:simple_infill}
 \index{Print Settings!Infill}
+\index{Paramètres d'impression!Remplissage}
 \index{Print Settings!Infill!Fill density}
-\texttt{Fill density} is defined on a scale of between 0 and 1, where 1 is 100\% and 0.4 would be 40\%.  For the majority of cases it makes no sense to 100\% fill the model with plastic, this would be a waste of material and take a long time.  Instead, most models can be filled with less material which is then sandwiched between layers filled at 100\% (see \texttt{Solid layers} above).
+\index{paramètres d'impression!Densitée de remplissage}
+\texttt{Fill density} (Densité de remplissage) est définie sur une échelle comprise entre 0 et 1, où 1 est de 100\% et 0,4 serait 40\%. Pour la majorité des cas, remplir la pièce à 100\% n'a pas d'intérêt, ce serait un gaspillage de matériel et prendrait beaucoup de temps. Au lieu de cela, la plupart des modèles peuvent être remplis avec moins de matière, qui sera ensuite pris en sandwich entre les couches remplies à 100\% (voir \texttt{Solid layers} au dessus).
 
-A density value of 0.4 is enough to give almost all models good mechanical strength.  A value of 0.2 is usually the minimum required to support flat ceilings.
+Une valeur de densité de 0,4 est suffisant pour donner à la quasi-totalité des modèles une bonne résistance mécanique. Une valeur de 0,2 est généralement le minimum requis pour soutenir des plafonds plats.
 
 \index{Print Settings!Infill!Fill pattern}
-Slic3r offers several fill patterns which will be discussed in more depth in section \ref{sec:infill_patterns_and_density} - Infill Choices.  Choosing a \texttt{Fill pattern} will depend on the kind of model, the desired structural  strength, print speed, and personal taste.  The more exotic fill methods are usually too slow and unnecessarily complex for most use cases, and so most of the time the infill pattern is either \texttt{rectilinear}, \texttt{line}, or \texttt{honeycomb}.  Honeycomb gives the most strength but is slower than both rectilinear or line.
+Slic3r offre plusieurs motifs de remplissage qui seront examinés plus en détail dans la section \ref{sec:infill_patterns_and_density} - Motifs et densitée de remplissage.  Choisir un \texttt{Fill pattern} (motif de remplissage) dépendra du type de modèle, la résistance souhaitée de la structure , la vitesse d'impression, et des goûts personnels. Les modes de remplissage plus exotiques sont généralement trop lent et inutilement complexe pour la plupart des cas d'utilisation, et donc la plupart du temps, le motif de remplissage est soit \texttt{rectilinear} (rectiligne), \texttt{line} (ligne), or \texttt{honeycomb} (nid d'abeille).  Honeycomb offre le plus résistance, mais est plus lent que les deux rectilinear ou line.
 
 % paragraph infill (end)
 
-\paragraph{Support material.} % (fold)
+\paragraph{Support. (Support material)} % (fold)
 \label{par:simple_support_material}
 \index{Print Settings!Support material}
+\index{Paramètres d'impression!Support}
 \index{Print Settings!Support material!Generate support material}
+\index{Paramètres d'impression!Support!Générer le support}
 \index{Print Settings!Support material!Pattern spacing}
-Printing a model from the bottom up, as with FDM, means that any significant overhangs will be printed in the air, and most likely droop or not print correctly.  Choosing support material (\texttt{Generate support material}) will add additional structures around the model which will build up to then support the overhanging part.  The \texttt{Pattern spacing} option determines how dense the support material is printed.
+\index{Paramètres d'impression!Support!Espacement du motif}
+Imprimer un modèle de bas en haut, avec une imprimante FDM, signifie que les saillies importantes seront imprimées dans le vide, pruduisant des affaissement ou un mauvais résultat.  Obter pour un support (\texttt{Generate support material}) ajoutera des structures supplémentaires dans le modèle qui seront construites pour soutenir la partie en surplomb. Le paramètre \texttt{Pattern spacing} (espacement du motif) détermine la densité du support qui est imprimé.
 
 \begin{figure}[H]
 \centering
 \includegraphics[keepaspectratio=true,width=0.75\textwidth]{simple_mode/support_example.jpg}
-\caption{An example of an object printed with support material.}
+\caption{Un exemple d'un objet imprimé avec un support.}
 \label{fig:support_example}
 \end{figure}
 
-Tip: It is sometimes worth considering altering the orientation of the model in order to possibly reduce overhangs.
+Astuce: Il est parfois utile d'envisager de modifier l'orientation du modèle afin de réduire éventuellement les surplombs.
 
 \index{Print Settings!Support material!Raft layers}
-\texttt{Raft layers} will add additional layers underneath the model and stems from the early days of 3D printing.  It can help with prints without a heated bed, or where the bed is not very flat, but it is usually not required and is not recommended.  The raft also requires post-processing to remove it.
+\index{Paramètres d'impression!Support!Radier}
+\texttt{Raft layers} (radier) va ajouter des couches supplémentaires sous le modèle et découle depuis les débuts de l'impression 3D. Il peut vous aider à imprimer sans lit chauffé, ou lorsque le lit n'est pas très plat, mais il n'est généralement pas nécessaire et n'est pas recommandé. Le radier nécessite en outre un post-traitement pour le supprimer.
 % paragraph support_material (end)
 
-\paragraph{Speed.} % (fold)
+\paragraph{Vitesse. (Speed)} % (fold)
 \label{par:simple_speed}
 \index{Print Settings!Speed}
-In simple mode there are only three speed settings to consider:
+En mode simple, il n'y a que trois réglages de vitesse à configurer:
 \index{Print Settings!Speed!Perimeters}
+\index{Paramètres d'impression!Périmètres}
 \index{Print Settings!Speed!Infill}
+\index{Paramètres d'impression!Vitesse!Remplissage}
 \index{Print Settings!Speed!Travel}
+\index{Paramètres d'impression!Vitesse!Déplacement}
 \begin{itemize}
-	\item \texttt{Perimeters}  - The outline of the model may benefit from being printed slightly slower so that the outside skin of the print has fewer blemishes.
-	\item \texttt{Infill}  - As the infill is hidden this can be extruded a little faster.  Take care though not to go too fast as higher speeds results in thinner extrusions, and this may affect how the extrusions bond.
-	\item \texttt{Travel}  - The jump between the end of one extrusion and the next should usually be performed as quickly as the printer will allow in order to minimise any mess caused by material oozing from the nozzle.
+	\item \texttt{Perimeters} (Perimeters) - Le contour du modèle peut bénéficier d'une vitesse d'impression légèrement plus lente de sorte que la peau extérieure de l'impression ait moins de défauts.
+	\item \texttt{Remplissage} (Infill) - Comme le remplissage est caché il peut être extrudé un peu plus vite. Prenez bien soin de ne pas aller trop vite, car plus la vitesse est élevée, et plus les extrusions sont minces, et cela peut affecter la façon dont se fait la liaison entre les extrusions.
+	\item \texttt{Déplacement} (Travel) - Le saut entre la fin d'une extrusion et la suivante doivent généralement être effectuées aussi rapidement que l'imprimante le permet , afin de minimiser les dégâts causés par suintement de matériau depuis la buse.
 \end{itemize}
 % paragraph speed (end)
 
-\paragraph{Brim.} % (fold)
+\paragraph{Bordure. (Brim)} % (fold)
 \label{par:simple_brim}
 \index{Print Settings!Brim}
+\index{Paramètres d'impression!Bordure}
 \index{Print Settings!Brim!Brim width}
-\texttt{Brim width} is used to add more perimeters to the first layer, as a base flange, in order to provide more surface area for the print to stick to the bed with in order to reduce warping (see §\ref{sec:the_important_first_layer}). The brim is then cut away once the print is finished and removed from the bed.
+\index{Paramètres d'impression!Bordure!Largeur de bordure}
+\texttt{Brim width} (largeur de bordure) est utilisé pour ajouter plus de périmètres à la première couche, en tant base supplémentaire, afin de fournir une plus grande surface pour que l'impression colle au lit , afin de réduire les déformation (voir §\ref{sec:the_important_first_layer}). Le bord est ensuite découpée une fois que l'impression est terminée et retirée du lit.
 
 \begin{figure}[H]
 \centering
 \includegraphics[keepaspectratio=true,width=0.75\textwidth]{simple_mode/brim.jpg}
-\caption{An example of brim.}
+\caption{Un exemple de bordure.}
 \label{fig:an_example_of_brim}
 \end{figure}
 
 % paragraph brim (end)
 
-\paragraph{Sequential Printing.} % (fold)
+\paragraph{Impression Sequentielle.} % (fold)
 \label{par:sequential_printing}
-This feature allows to compose a plate of objects but have the printer complete each one individually before going back to Z = 0 and starting with the next one. See the section about Sequential Printing in the Advanced Topics chapter.
+Cette fonction permet de composer un plateau d'objets, mais que l'imprimante compléter chacun individuellement avant de revenir à Z = 0 et en continuant par le suivant. Voir la section sur l'impression séquentielle dans le chapitre des sujets avancés.
 
 
 \subsection{Filament Settings}
