@@ -142,115 +142,132 @@ En mode simple, il n'y a que trois réglages de vitesse à configurer:
 
 \paragraph{Impression Sequentielle.} % (fold)
 \label{par:sequential_printing}
-Cette fonction permet de composer un plateau d'objets, mais que l'imprimante compléter chacun individuellement avant de revenir à Z = 0 et en continuant par le suivant. Voir la section sur l'impression séquentielle dans le chapitre des sujets avancés.
+Cette fonction permet de composer un plateau d'objets, en imprimant complétement chaque pièce individuellement, avant de revenir à Z = 0 et de continuer par le suivant. Voir la section sur l'impression séquentielle dans le chapitre des sujets avancés.
 
 
-\subsection{Filament Settings}
+\subsection{Paramètres du Filament}
 \index{Filament Settings}
-
-The \texttt{Filament Settings} will normally be used infrequently, for example on receipt of a new roll of filament.
+\index{Paramètres du Filament}
+L'onglet \texttt{Filament Settings} (Paramètres du Filament) sera normalement utilisé peu fréquemment, par exemple lors de la réception d'un nouveau rouleau de filament.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{simple_mode/simple_mode_filament_settings.png}
-\caption{Simple Mode: Filament Settings.}
+\caption{Mode Simple: Paramètres du Filament.}
 \label{fig:simple_mode_filament_settings}
 \end{figure}
 
 \paragraph{Filament.} % (fold)
 \label{par:filament}
 \index{Filament Settings!Filament}
+\index{Paramètres du Filament!Filament}
 \index{Filament Settings!Filament!Diameter}
-The \texttt{Diameter} setting will already have been filled from the value given during the wizard (see p.\pageref{sub:4_filament_diameter}), but can be updated here.
+\index{Paramètres du Filament!Filament!Diamètres}
+Le paramètre \texttt{Diameter} (Diamètre) aura déjà été rempli à partir de la valeur donnée au cours de l'assistant (voir p.\pageref{sub:4_filament_diameter}), mais peut être modifiée ici.
 
 \index{Filament Settings!Filament!Extrusion multiplier}
-The \texttt{Extrusion multiplier} setting allows the fine tuning of the extrusion flow rate, and is is given as a factor, e.g. 1 means 100\%, 1.5 would mean 150\%.  Whilst the value should ideally be set in the firmware it can be useful to test slight changes to the rate by altering this value.  It varies the amount of plastic proportionally and should be changed in very small steps (e.g. +/- 0.05) as the effects are very visible.
+\index{Paramètres du Filament!Filament!Multiplicateur d'Extrusion}
+La paramètre \texttt{Extrusion multiplier} (Multiplicateur d'Extrusion) permet le réglage fin de la vitesse d'écoulement d'extrusion, et est est donnée en tant que facteur, par exemple, 1 signifie 100 \%, 1,5 signifierait 150 \%. Alors que la valeur devrait idéalement être définie dans le firmware, il peut être utile de tester légères modifications de la vitesse en modifiant cette valeur. Elle modifie la quantité de plastique en proportion et doit être changé par de très petites étapes (par exemple + / - 0,05) car les effets sont très visibles.
 % paragraph filament (end)
 
-\paragraph{Temperature.} % (fold)
+\paragraph{Température.} % (fold)
 \label{par:temperature}
 \index{Filament Settings!Temperature!Extruder}
+\index{Paramètres du Filament!Température!Extrudeuse}
 \index{Filament Settings!Temperature!Bed}
-These values are also filled from the wizard, but here the opportunity exists to set the temperature for the first layer (see p.\pageref{sec:the_important_first_layer}).
+\index{Paramètres du Filament!Température!Lit}
+Ces valeurs sont également définies à partir de l'assistant, mais ici la possibilité existe de régler la température de la première couche (voir p.\pageref{sec:the_important_first_layer}).
 % paragraph temperature (end)
 
 
-\subsection{Printer Settings}
+\subsection{Paramètres de l'Imprimante}
 \index{Printer Settings}
+\index{Paramètres de l'Imprimante}
 
-The \texttt{Printer Settings} will be updated the least, unless Slic3r is going to be used for many printers, for example, in a 3D printer farm.
+Les paramètres de l'imprimante (\texttt{Printer Settings}) ne seront jamais mis à jour, à moins que Slic3r ne soit utilisé pour de nombreuses imprimantes, par exemple, pour une batterie de l'imprimante 3D.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{simple_mode/simple_mode_printer_settings.png}
-\caption{Simple Mode: Printer Settings.}
+\caption{Mode Simple: Paramètres de l'Imprimante.}
 \label{fig:simple_mode_printer_settings}
 \end{figure}
 
-\paragraph{Size and coordinates.} % (fold)
+\paragraph{Size and coordinates. (Taille et coordonnées)} % (fold)
 \label{par:size_and_coordinates}
 \index{Printer Settings!Size and coordinates}
+\index{Paramètres de l'Imprimante!Taille et coordonnées}
 \index{Printer Settings!Size and coordinates!Bed size}
-The \texttt{Bed size} setting is taken from the wizard (see p.\pageref{sub:2_bed_size}) and is only used for previewing the model in the plater.
+\index{Paramètres de l'Imprimante!Taille et coordonnées!Taille d lit}
+Le paramètre \texttt{Bed size} (Taille du lit) est repris à partir de l'assistant (voir p.\pageref{sub:2_bed_size}) et est utilisé seulement pour la prévisualisation du modèle sur la surface de travail.
 
 \index{Printer Settings!Size and coordinates!Print center}
-The \texttt{Print center} is the point around which the print will be centered.  A \texttt{Bed size} of 200mmx200mm and a \texttt{Print center} of 100mmx100mm would sit the print in the middle.  Should it be desired to print away from the center, because of a scratch in the glass perhaps, then this option should be used.
+\index{Paramètres de l'Imprimante!Taille et coordonnées!Centre de l'impression}
+Le paramètre \texttt{Print center} (centre de l'impression) defini le point autour duquel l'impression sera centré.  La taille du lit (\texttt{Bed size}) réglée à 200mmx200mm et le centre d'impression (\texttt{Print center}) réglé à 100mmx100mm would placera l'impression au milieu.  Si l'on souhaite imprimer à partir du centre, afin d'eviter des bris sur le rebors du verre, cette option doit être utilisée.
 
 \index{Printer Settings!Size and coordinates!Z offset}
-\texttt{Z offset} can be used to compensate for an incorrectly calibrated Z end-stop.  If the nozzle stops slightly too far from the bed, then adding a negative value will offset all layers by that amount.  The correct solution however is to fix the end-stop itself.
+\index{Paramètres de l'Imprimante!Taille et coordonnées!Décalage Z}
+\texttt{Z offset} (décalage Z) peut être utilisé pour compenser une fin de course Z mal calibré. Si la buse s'arrête un peu trop loin du lit, on peu conpenser le décalage en ajoutant une valeur négative. La bonne solution est de régler la butée.
 
-The optimal Z endstop position is where the nozzle tip barely touches the surface of the bed when homed.  A sheet of paper makes a good gauge for this very small distance.  It is not recommended to use this setting to try and improve layer adhesion, by "squashing" the bottom layer into the bed, instead look at the suggestions in section \ref{sec:the_important_first_layer}.
+La position de fin de course Z optimale est là où la buse touche à peine la surface du lit quand elle se trouve au point d'origine. Une feuille de papier fait un bon indicateur pour cette très petite distance. Il n'est pas recommandé d'utiliser ce paramètre pour essayer d'améliorer l'adhérence couche, en "écrasant" la couche inférieure sur le lit, regardez plutôt les suggestions de la section \ref{sec:the_important_first_layer}.
 % paragraph size_and_coordinates (end)
 
-\paragraph{Firmware.} % (fold)
+\paragraph{Firmware. (Micrologiciel)} % (fold)
 \label{par:firmware}
 \index{Printer Settings!Firmware!G-code flavour}
-As selected in the wizard (see p.\pageref{sub:1_firmware_type}), \texttt{G-code flavour} defines the dialect of G-code generated.
+\index{Paramètres de l'Imprimante!Micrologiciel!Variante du G-code}
+Comme renseigné par l'assistant (voir p.\pageref{sub:1_firmware_type}), \texttt{G-code flavour} (variante du G-code) définit le dialecte de G-code généré.
 % paragraph firmware (end)
 
 
 \paragraph{Extruder.} % (fold)
 \label{par:extruder}
 \index{Printer Settings!Extruder!Nozzle diameter}
-\texttt{Nozzle diameter} was defined in the wizard (see p.\pageref{sub:3_nozzle_diameter}).
+\index{Paramètres de l'Imprimante!Extrudeuse!Diamètre de la buze}
+\texttt{Nozzle diameter} (diamètre dela buze) est renseigné par l'assistant (voir p.\pageref{sub:3_nozzle_diameter}).
 % paragraph extruder (end)
 
 \paragraph{Retraction.} % (fold)
 \label{par:retraction}
 \index{Printer Settings!Extruder!Retraction!Length}
-Unless the material being extruded has a very high viscosity it may ooze between extrusions due to gravity.  This can be remedied by actively retracting the filament between extrusions.  Setting the \texttt{Length} parameter to a positive value will cause the filament to be reversed by that many millimeters before travel.  The retraction will then be compensated for by the same amount after the travel move, before starting the new extrusion path.
+\index{Paramètres de l'Imprimante!Extrudeuse!Rétractation!Longueur}
+À moins que le matériau en cours d'extrusion ait une viscosité très élevée, il peut suinter entre extrusions dues à la pesanteur. Cela peut être résolu en rétractant activement le filament entre les extrusions.  Régler le paramètre \texttt{Length} (longueur) à une valeur positive causera le filament à être retiré de plusieurs millimètres avant le déplacement. Le retrait sera alors compensée par la même quantité après le déménagement de Voyage, avant de commencer le nouveau chemin d'extrusion.
 
-A value of between 1 and 2mm is usually recommended. Bowden extruders may need up to 4 or 5mm due to the hysteresis introduced by the tube.
+Une valeur comprise entre 1 et 2 mm est habituellement recommandé. Extrudeuses sous gaine peuvent avoir besoin de 4 ou 5 mm en raison de l'hystérésis introduit par le tube.
 \index{Printer Settings!Extruder!Retraction!Lift Z}
-Setting the \texttt{Lift Z} parameter to a positive value will raise the entire extruder on the Z axis by that many millimeters during each travel.  This can be useful to ensure the nozzle will not catch on any already laid filament, however it is usually not necessary and will slow the print speed.  A value of 0.1mm is usually sufficient.
+\index{Paramètres de l'Imprimante!Extrudeuse!Rétractation!élévation Z}
+Régler le paramètre \texttt{Lift Z} (Elévation Z) à une valeur positive relèvera l'extrudeuse sur l'axe Z de ce nombre de millimètres durant chaque déplacement. Cela peut être utile pour s'assurer que la buse n'accroche pas la couche précedente, mais cette valeur n'est généralement pas nécessaire et ralentit la vitesse d'impression. Une valeur de 0,1 mm est généralement suffisante.
 % paragraph retraction (end)
 
 \paragraph{Start, End and Layer Chance G-codes.} % (fold)
 \label{par:start_end_g_code}
 \index{Printer Settings!Custom G-code!Start G-code}
+\index{Paramètres de l'Imprimante!G-code personalisé!G-code de démarrage}
 \index{Printer Settings!Custom G-code!End G-code}
-Custom G-code commands can be run before a print starts and after a print finishes.
+\index{Paramètres de l'Imprimante!G-code personalisé!G-code de fin}
+Les commandes G-code personnalisées peuvent être exécutés avant que l'impression démarre et après la fin de l'impression.
 
-Placeholders can be inserted in the G-code commands\footnote{https://github.com/alexrj/Slic3r/wiki/FAQ\#what-placeholders-can-i-use-in-custom-g-code}.  For example [next\_extruder] would return the index of the next extruder.
+Des variables d'environements peuvent être insérés dans les commandes G-code\footnote{https://github.com/alexrj/Slic3r/wiki/FAQ\#what-placeholders-can-i-use-in-custom-g-code}.  Par exemple [next\_extruder] retournerait l'index de la prochaine extrudeuse.
 
-The RepRap wiki is a good resource to learn about the variety of G-codes available: \texttt{http://reprap.org/wiki/G-code}.
+Le wiki RepRap est une bonne ressource pour en apprendre davantage sur la variété de G-codes disponibles: \texttt{http://reprap.org/wiki/G-code}.
 
-Note: Be sure to check that a given G-code is valid for your firmware.
+Remarque: Assurez-vous de vérifier qu'un G-code utilisé est valide pour votre micrologiciel.
 
-The codes specified in \texttt{Start G-code} are inserted at the beginning of the output file, directly after the temperature control commands for extruder and bed.  Note that if temperature control commands are specified (M104 and M190) then these will replace the temperature G-codes introduced by the \texttt{Filament} settings.
+Les commandes saisies dans la section \texttt{Start G-code} (G-code de démarrage) 
+sont insérés au début du fichier de sortie, directement après les instructions de commande de température de l'extrudeuse et du lit. Notez que si les commandes de contrôle de la température sont spécifiés (M104 et M190), alors celles-ci remplaceront les températures G-codes introduites par les paramètres \texttt{Filament}.
 
-Some common G-codes to use before the print starts are:
+Les G-codes courant à utiliser avant le début d'impression sont:
 \begin{itemize}
-	\item \textbf{G28}  - Homes all the axes.
+	\item \textbf{G28}  - Placer chaques axes à sa position d'origine.
 \end{itemize}
 
 
-Some common G-codes to use after the print ends are:
+Les G-codes courants à utiliser aprés la fin de l'impression sont:
 \begin{itemize}
-	\item \textbf{M104 S0}  - Sets the extruder temperature to zero.
-	\item \textbf{M140 S0} - Sets the heated bed temperature to zero.
-	\item \textbf{G28 X0} - Home the X axis.
-	\item \textbf{M84}  - Disables the motors.
+	\item \textbf{M104 S0}  - Règle la température de l'extrudeuse à zéro.
+	\item \textbf{M140 S0} - Définit la température du lit chauffant à zéro.
+	\item \textbf{G28 X0} - Place l'axe X à son origine.
+	\item \textbf{M84}  - Désactive les moteurs.
 \end{itemize}
 % paragraph start_end_g_code (end)
 
