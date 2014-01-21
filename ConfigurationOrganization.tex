@@ -1,17 +1,17 @@
 %!TEX root = Slic3r-Manual.tex
 
-There are two ways in which to organise the configuration settings: exporting and importing the configuration settings, and profiles.  The former is available in both simple and expert mode, whereas profiles is only available in expert mode.
+Il ya deux façons d'organiser les paramètres de configuration: exporter et importer les paramètres de configuration, et des profils. Le premier est disponible en mode simple et expert, alors que les profils sont disponibles uniquement en mode expert.
 
 \section{Exporting and Importing Configuration} % (fold)
 \label{sub:exporting_and_importing_configuration}
 \index{configuration!export}
 \index{configuration!import}
 
-The current set of configuration options can be simply exported via the \texttt{Export Config} File menu option. This saves all the values into a text file with a \texttt{.ini} extension.  Previously saved files can be loaded with the \texttt{Load Config} menu option.
+L'ensemble actuel d'options de configuration peut être tout simplement exporté via le menu File (Fichier)  \texttt{Export Config}. Cela permet se sauvegarder toutes les valeurs dans un fichier texte avec l'extention \texttt{.ini} .  Les fichiers précédemment enregistrés peuvent être chargés avec le menu File (fichier) \texttt{Load Config} (charger la configuration).
 
-This gives a rudimentary means to store different configuration settings for different needs.  For example a set with slightly faster print speeds, or a different infill pattern.  However this way of organising things will quickly become frustrating, as each minor change to a parameter may have to be duplicated across many configurations.  For this reason, profiles are a more suitable way of managing multiple configurations.
+Cela donne un des moyens rudimentaires pour stocker des paramètres de configuration pour les différents besoins. Par exemple, un ensemble avec des vitesses d'impression légèrement plus rapides, ou un motif de remplissage différent. Cependant, cette façon d'organiser les choses va vite devenir frustrante, car chaque changement mineur d'un paramètre pourrait être à dupliqué dans de nombreuses configurations. Pour cette raison, les profils sont de façon plus appropriée de gérer plusieurs configurations.
 
-This method also allows configuration to be transferred between machines, or stored remotely.
+Cette méthode permet également le transfert de configurations entre machines, ou le stockage à distance.
 
 % section exporting_and_importing_configuration (end)
 
@@ -19,29 +19,32 @@ This method also allows configuration to be transferred between machines, or sto
 \section{Profiles} % (fold)
 \label{sec:profiles}
 \index{profiles}
+\index{profils}
 
-After a few prints it will become apparent that it is worth having a set of configuration options to choose from, and that some parameters change at different rates as others.  In expert mode, profiles can be created for Print, Filament and Printer settings, with the expectation that the printer settings change least often, filament rarely, and the print settings could be changed for each model.  These different profiles can be mixed and matched as desired, and can be selected either in their respective tabs, or directly from the plater.
+Après quelques impressions, il deviendra évident qu'il est utile d'avoir un ensemble d'options de configuration à choisir, et que certains paramètres changent plus souvent que d'autres. En mode expert, des profils peuvent être créés pour les paramètres d'impression, de Filament et d'imprimante, dans l'espoir que les paramètres d'imprimante changent peu souvent, de filaments rarement, cependant les paramètres d'impression peuvent être modifiés pour chaque modèle. Ces différents profils peuvent être mélangés et combinés à volonté, et peuvent être sélectionnés dans leurs onglets respectifs, ou directement à partir de la surface de travail.
 
 \subsection{Creating Profiles} % (fold)
 \label{sub:creating_profiles}
 \index{profiles!create}
+\index{profils!création}
 
-Open the desired tab and change the settings as necessary.  Once satisfied, click the save icon to the left above the setting titles, and give a suitable name when prompted.
+Ouvrez l'onglet souhaité et modifiez les paramètres si nécessaire. Une fois satisfait, cliquez sur l'icône de sauvegarde vers la gauche au-dessus des titres de réglage, et donner un nom approprié à l'invite.
 
 \begin{figure}[H]
 \centering
 \includegraphics[keepaspectratio=true,width=1\textwidth]{organising/creating_a_profile.png}
-\caption{Saving a profile.}
+\caption{Sauver un profil.}
 \label{fig:creating_a_profile}
 \end{figure}
 
 \index{profiles!delete}
-Profiles can be deleted by choosing the profile to delete and clicking the red delete button next to the save button.
+\index{profils!effacer}
+Les profils peuvent être supprimés, en choisissant le profil à supprimer et en cliquant sur le bouton rouge supprimer à côté du bouton Enregistrer.
 
 \begin{figure}[H]
 \centering
 \includegraphics[keepaspectratio=true,width=1\textwidth]{organising/deleting_a_profile.png}
-\caption{Deleting a profile.}
+\caption{Effacer un profil.}
 \label{fig:deleting_a_profile}
 \end{figure}
 
