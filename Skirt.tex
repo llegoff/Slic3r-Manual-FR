@@ -1,28 +1,34 @@
 %!TEX root = Slic3r-Manual.tex
 
-\section{Skirt} % (fold)
+\section{Contour} % (fold)
 \label{sec:skirt}
 \index{skirt}
+\index{contour}
 \index{Print Settings!Skirt and brim!Skirt}
+\index{Param\`etres d'Impression!Contour et bordure!Contour}
 
-The \texttt{Skirt} setting adds an extrusion a short distance away from the perimiter of the object.  This can ensure that the material is flowing smoothly from the extruder before it starts on the model proper.
+Le param\`etre \texttt{Skirt} (Contour) ajoute une extrusion \`a une courte distance du perim\`etre de l'objet. Ceci peut faire en sorte que le mat\'eriau sorte de l'extrudeuse correctement, avant de commencer sur le mod\`ele correspondant.
 
 \begin{figure}[H]
 \centering
 \includegraphics[keepaspectratio=true,width=1.0\textwidth]{expertmode/skirt_settings.png}
-\caption{Skirt settings.}
+\caption{Param\`etres de contour.}
 \label{fig:skirt_settings}
 \end{figure}
 
 \begin{itemize}
     \index{Print Settings!Skirt and brim!Skirt!Loops}
-    \item \texttt{Loops} - How many circuits should be completed before starting on the model.  One loop is usually sufficient.
+	\index{Param\`etres d'Impression!Contour et bordure!Contour!Boucles}
+    \item \texttt{Loops} (Boucles) - Combien de circuits devraient \^etre achev\'es avant de commencer le mod\`ele. Une boucle est g\'en\'eralement suffisante.
     \index{Print Settings!Skirt and brim!Skirt!Distance from object}
-    \item \texttt{Distance from object} - The millimeters between the object and the skirt.  The default of 6mm is usually sufficient.
+	\index{Param\`etres d'Impression!Contour et bordure!Contour!Distance de l'objet}
+    \item \texttt{Distance from object} (Distance de l'objet) - Les millim\`etres entre l'objet et le contour. La valeur par d\'efaut de 6 mm est g\'en\'eralement suffisante.
     \index{Print Settings!Skirt and brim!Skirt!Skirt height}
-    \item \texttt{Skirt height} - The number of layers to lay down a skirt for.  For ensuring the material is flowing smoothly, one layer is sufficient, however the skirt function can also be used to build walls around the object in case it should be protected from draughts.
+	\index{Param\`etres d'Impression!Contour et bordure!Contour!Hauteur du contour}
+    \item \texttt{Skirt height} (Hauteur du contour) - Le nombre de couches \`a imprimer pour le contour. Pour assurer le mat\'eriau sorte correctement, une couche suffit, mais la fonction de contour peut \'egalement \^etre utilis\'e pour construire des murs autour de l'objet au cas o\`u il devrait \^etre prot\'eg\'e des courants d'air.
     \index{Print Settings!Skirt and brim!Skirt!Minimum extrusion length}
-    \item \texttt{Minimum extrusion length} - Dictates a minimum number of millimeters that the skirt should be, should the loop around the object not be enough.
+	\index{Param\`etres d'Impression!Contour et bordure!Contour!Longueur minimum d'extrusion}
+    \item \texttt{Minimum extrusion length} - Indique le nombre minimum de millim\`etres que le contour doit avoir, si la boucle autour de l'objet ne suffit pas.
 \end{itemize}
 
 % section skirt (end)
