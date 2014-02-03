@@ -1,24 +1,25 @@
 %!TEX root = Slic3r-Manual.tex
 
-\section{Extrusion Width} % (fold)
+\section{Largeur d'Extrusion} % (fold)
 \label{sec:extrusion_width}
 \index{extrusion width}
+\index{largeur d'extrusion}
 
 \begin{figure}[H]
 \centering
 \includegraphics[keepaspectratio=true,width=1\textwidth]{expertmode/advanced_extrusion_widths_options.png}
-\caption{Extrusion widths options.}
+\caption{Paramètres de largeur d'Extrusion.}
 \label{fig:advanced_extrusion_widths_options}
 \end{figure}
 
-One reason for modifying the extrusion width has already been discussed: increasing first layer extrusion width in order to improve bed adhesion (see p.\pageref{par:wider_extrusion_width}).  There are some further cases where it may be beneficial to modify extrusion widths.
+Une des raisons de la modification de la largeur de l'extrusion a déjà été examinée: l'augmentation de la largeur d'extrusion de la première couche dans le but d'améliorer l'adhesion au lit. (voir p.\pageref{par:wider_extrusion_width}).  Il ya quelques autres cas où il peut être bénéfique de modifier la largeur d'extrusion.
 \begin{itemize}
-    \item \texttt{Perimeter} - A lower value will produce thinner extrusions which in turn will produce more accurate surfaces.
-    \item \texttt{Infill} and \texttt{Solid Infill} - A thicker extrusion for infill will produce faster prints and stronger parts.
-    \item \texttt{Top infill} - A thinner extrusion will improve surface finish and ensure corners are tightly filled.
-    \item \texttt{Support material} - As with the infill options, a thicker extrusion will speed up print time.
+    \item \texttt{Perimeter} (Périmètre) - Une valeur plus faible produira des extrusions minces qui à leurs tour produiront des surfaces plus précise.
+    \item \texttt{Infill} (Remplissage) et \texttt{Solid Infill} (Remplissage solide) - Une extrusion épaisse pour le remplissage produira des impressions plus rapides et des pièces plus solides.
+    \item \texttt{Top infill} (Remplissage suppérieur) - Une extrusion fine, améliorera la finition de la surface et assurera que es coins soit bien remplis.
+    \item \texttt{Support material} (Matière de Support) - Comme avec les options de remplissage, une extrusion épaisse permettra de réduire le temps d'impression.
 \end{itemize}
 
-It is important to remember that if the extrusion width is expressed as a percentage then this is computed from the \texttt{Layer height} property, and not the \texttt{Default extrusion width} setting.
+Il est important de se rappeler que, si la largeur de l'extrusion est exprimée en pourcentage, elle se calcule à partir de la propriété \texttt{Layer height} (Hauteur de couche), et non du paramètre \texttt{Default extrusion width} (Largeur d'extrusion par défaut).
 
 % section extrusion_width (end)
