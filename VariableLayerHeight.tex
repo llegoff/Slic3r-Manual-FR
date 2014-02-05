@@ -1,71 +1,72 @@
 %!TEX root = Slic3r-Manual.tex
 
-\section{Variable Layer Height} % (fold)
+\section{Hauteur de couche variable} % (fold)
 \label{sec:variable_layer_height}
 \index{layer height}
+\index{hauteur de couche}
 
-Slic3r gives the ability to adjust the layer height between arbitrary positions along the Z axis.  That is, parts of the model could be printed with a coarse layer height, for example vertical sections, and other parts could be printed with a finer layer height, for example sloping gradients where layering appears more pronounced.
+Slic3r donne la possibilité de régler la hauteur de couche entre des positions arbitraires le long de l'axe Z. Voilà, des parties du modèle peuvent être imprimés avec une hauteur de couche grossière, par exemple des sections verticales, et d'autres parties pourraient être imprimés avec une hauteur de couche plus fine, par exemple les dégradés inclinés où les couches apparaissent plus marquées.
 
-The model in fig. \ref{fig:example_model} gives a rudimentary example of where variable layer heights could be used to improve print quality.  The walls of the structure need not be rendered in high definition for acceptable quality, however the sloping roof shows layer artifacts as the layer height of 0.4mm is too coarse, particularly for the very top, which is flattened.  This is shown in the G-Code rendering in fig \ref{fig:example_gcode_normal_layer_heights}.
+Le modèle de la fig. \ref{fig:example_model} donne un exemple rudimentaire où des hauteurs de couche variables pourraient être utilisées pour améliorer la qualité d'impression.  Les murs de la structure n'ont pas à être imprimés en haute définition pour une qualité acceptable, mais la pente du toit apparait en escalier, une hauteur de couche de 0,4 mm est trop grossière, en particulier pour la couche supérieure, qui est aplatie.  Ceci est illustré dans le G-Code représenté à la fig \ref{fig:example_gcode_normal_layer_heights}.
 
 
 \begin{figure}[H]
 \centering
 \includegraphics[keepaspectratio=true,width=0.75\textwidth]{expertmode/variable_layer_height/example_model.png}
-\caption{Example model highlighting use case for variable layer heights.}
+\caption{Exemple de modèle mettant en evidence un cas d'utilisation des couches variables.}
 \label{fig:example_model}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[keepaspectratio=true,width=0.75\textwidth]{expertmode/variable_layer_height/example_gcode_normal_layer_heights.png}
-\caption{Example with normal layer height.}
+\caption{Exemple avec des couches normales.}
 \label{fig:example_gcode_normal_layer_heights}
 \end{figure}
 
-The variable layer height options are available by double clicking on a part name in the Plater window.  This will cause a pop-up window to be displayed which contains two tabs. The first gives some information about the model, as shown in fig. \ref{fig:variable_layer_height_options_tab_1}.
+Les paramètres de hauteur de couche variables sont disponibles en double-cliquant sur ​​le nom de la pièce dans la fenêtre Plater (surface de travail).  Cela ouvrira une fenêtre qui contient deux onglets. Le premier donne des informations sur le modèle, comme indiqué dans la fig. \ref{fig:variable_layer_height_options_tab_1}.
 
 \begin{figure}[H]
 \centering
 \includegraphics[keepaspectratio=true,width=0.75\textwidth]{expertmode/variable_layer_height/variable_layer_height_options_tab_1.png}
-\caption{Variable layer height options - Info.}
+\caption{Paramètres de Couche variable - Info.}
 \label{fig:variable_layer_height_options_tab_1}
 \end{figure}
 
-It is worth noting the height of the model, as this will be useful when calculating the maximum Z height.
+Il convient de noter la hauteur du modèle, puisque cela sera utile pour le calcul de la hauteur maximale de Z.
 
-The second tab (fig. \ref{fig:variable_layer_height_options_tab_2}) presents a table where each row defines a layer height for a particular range along the Z axis, given in millimeters.  In this example the walls of the model are printed at 0.4mm, the steeper parts of the roof are printed at 0.2mm, and the less steep at 0.15mm.  Note that each range divides exactly by the given layer height so there are no "gaps" between sections.
+Le deuxième onglet (fig. \ref{fig:variable_layer_height_options_tab_2}) présente un tableau dans lequel chaque rangée définit une hauteur de couche pour une plage particulière le long de l'axe Z, exprimée en millimètres. Dans cet exemple, les parois du modèle sont imprimés à 0,4 mm, les parties raides du toit sont imprimées à 0,2 mm, et la moins raide à 0,15 mm. Notez que chaque plage se divise exactement par la hauteur de la couche donnée de sorte qu'il n'y a pas de «trous» entre les sections.
 
 \begin{figure}[H]
 \centering
 \includegraphics[keepaspectratio=true,width=0.75\textwidth]{expertmode/variable_layer_height/variable_layer_height_options_tab_2.png}
-\caption{Variable layer height options - Layers.}
+\caption{Paramètres de Couche variable - Layers (Couches).}
 \label{fig:variable_layer_height_options_tab_2}
 \end{figure}
 
-The resulting G-Code (fig. \ref{fig:example_gcode_variable_layer_heights}) shows a higher definition which should result in a higher quality print.
+Le G-Code résultant (fig. \ref{fig:example_gcode_variable_layer_heights}) montre une plus haute définition qui devrait aboutir à une impression de qualité supérieure.
 
 \begin{figure}[H]
 \centering
 \includegraphics[keepaspectratio=true,width=0.75\textwidth]{expertmode/variable_layer_height/example_gcode_variable_layer_heights.png}
-\caption{Example with variable layer height.}
+\caption{Example avec une hauteur de couche variable.}
 \label{fig:example_gcode_variable_layer_heights}
 \end{figure}
 
-Fig. \ref{fig:example_print} shows the example model printed.  The print on the left has 0.4mm layer height throughout, whereas the print on the right has the variable layer height.
+La Fig. \ref{fig:example_print} montre le modèle d'exemple imprimé.  L'impression de la gauche a 0,4 mm hauteur de la couche partout, alors que l'impression sur la droite a la hauteur de la couche variable.
 
 \begin{figure}[H]
 \centering
 \includegraphics[keepaspectratio=true,width=1\textwidth]{expertmode/variable_layer_height/example_print.jpg}
-\caption{Example print with variable layer height.}
+\caption{Exemple d'impression avec une hauteur de couches variable.}
 \label{fig:example_print}
 \end{figure}
 
-An additional feature of the variable layers height option is that by entering a zero for a range that part of the model will not be printed.  Fig. \ref{fig:example_gcode_skipped_layers} shows the G-Code where layers between 0 and 4mm are skipped.  This is a useful way of dividing a tall model into multiple, shorter sections which can be printed individually and assembled afterwards.
+Une caractéristique supplémentaire de l'option de hauteur de couches variable est que par la saisie d'un zéro pour une plage de la partie du modèle ne sera pas imprimé.  Fig. \ref{fig:example_gcode_skipped_layers} shows the G-Code where layers between 0 and 4mm are skipped.  This is a useful way of dividing a tall model into multiple, shorter sections which can be printed individually and assembled afterwards.
 \begin{figure}[H]
 \centering
 \includegraphics[keepaspectratio=true,width=0.75\textwidth]{expertmode/variable_layer_height/example_gcode_skipped_layers.png}
-\caption{Example with skipped layers.}
+\caption{Exemple avec des couches ignorés.}
 \label{fig:example_gcode_skipped_layers}
 \end{figure}
 
