@@ -1,34 +1,36 @@
 %!TEX root = Slic3r-Manual.tex
 
-\section{SVG Output} % (fold)
+\section{Sortie SVG} % (fold)
 \label{sec:svg_output}
 \index{SVG}
 \index{DLP resin printer}
+\index{imprimante résine DLP}
 \index{powder-bed printer}
+\index{imprimante à poudre}
 
-Slic3r can produce output for other types of 3D printers which require each layer to be represented as image, for example DLP resin or powder-bed printers.  These expect an image usually consisting of a white silhouette on a black background (See fig \ref{fig:example_svg_slice}).  Almost all image formats can be used (bmp, png, etc.), however, because the image may have to be scaled, it is usually desirable to use a vector format, rather than a bitmap format.  For this reason it is common to use Scalable Vector Graphics (SVG) format.
+Slic3r peut produire une sortie pour d'autres types d'imprimantes 3D qui nécessitent que chaque couche soit représenté en image, par exemple les imprimante résine DLP ou à poudre-lit. Ces imprimantes attendent une image généralement constitué d'une silhouette blanche sur un fond noir (voir figure \ref{fig:example_svg_slice}).  Presque tous les formats d'image peuvent être utilisés (bmp, png, etc), cependant, parce que l'image peut être réduite, il est généralement souhaitable d'utiliser un format vectoriel, plutôt qu'un format bitmap. Pour cette raison, il est courant d'utiliser Scalable Vector Graphics (SVG) format.
 
 \begin{figure}[H]
 \centering
 \includegraphics[keepaspectratio=true,width=0.5\textwidth]{advanced/svg_output/example_svg_slice.png}
-\caption{Example SVG slice.}
+\caption{Example de tranche SVG.}
 \label{fig:example_svg_slice}
 \end{figure}
 
 \index{Menu!Slice to SVG...}
 
-Slic3r provides the ability to produce SVG output suitable for such printers.  Instead of using the \texttt{Plater}, the process begins by selecting the \texttt{Slice to SVG...} option from the \texttt{File} menu.  This prompts for the source file (STL, OBJ or AMF), and when selected will prompt for where the output SVG file should be saved.  Slic3r will then go and produce the SVG file.
+Slic3r offre la possibilité de produire une sortie SVG approprié pour de telles imprimantes.  Au lieu d'utiliser le \texttt{Plater}, le processus commence par la sélection de l'option \texttt{Slice to SVG...} du menu \texttt{File}.  Celui-ci demande le fichier source (STL, OBJ ou AMF), et lorsqu'il est sélectionné demande où le fichier SVG de sortie doit être enregistré. Ensuite Slic3r démarre et produit le fichier SVG.
 
-Attempting to view the SVG file in a browser will result in only the first layer being shown, and only the negative islands within the model (as the browser background is usually white).
+Tenter de voir le fichier SVG dans un navigateur entraînera seulement l'affichage de la première couche, et seules les îles négatifs dans le modèle (comme l'arrière-plan du navigateur est généralement blanc).
 
 \begin{figure}[H]
 \centering
 \includegraphics[keepaspectratio=true,width=0.75\textwidth]{advanced/svg_output/svg_direct_browser.png}
-\caption{SVG in the browser.}
+\caption{le fichier SVG vu dans un navigateur.}
 \label{fig:svg_direct_browser}
 \end{figure}
 
-For this reason a small web application was written to allow each slice to be displayed, and for it to be shown on a black background\footnote{\url{http://garyhodgson.github.io/slic3rsvgviewer}}.  Navigate to the application and drag and drop the SVG file onto the screen to have it load and display.
+Pour cette raison, une petite application web a été écrite pour permettre de visualiser chaque tranche sur un fond noir\footnote{\url{http://garyhodgson.github.io/slic3rsvgviewer}}.  Accédez à l'application et faites glisser le fichier SVG sur l'écran pour le charger et l'afficher.
 
 \begin{figure}[H]
 \centering
@@ -37,23 +39,23 @@ For this reason a small web application was written to allow each slice to be di
 \label{fig:svg_slic3rsvg_viewer}
 \end{figure}
 
-\subsection{SVG Settings} % (fold)
+\subsection{Paramètres SVG} % (fold)
 \label{sub:svg_settings}
 
-The majority of options in Slic3r are not required when generating SVG, however the \texttt{Layer height} setting will dictate the number of layers.  Note that Slic3r restricts the layer height to be smaller than the nozzle diameter, so this may also have to increased if higher layers are desired.
+La majorité des options dans Slic3r ne sont pas nécessaires pour la génération SVG, cependant le paramètre \texttt{Layer height} déterminera le nombre de couches. Notez que Slic3r limite la hauteur de la couche pour qu'elle soit plus petite que le diamètre de la buse, donc cela peut également être augmenter si l'on souhaite des couches plus hautes.
 
 % subsection svg_settings (end)
 
-\subsection{Printing with SVG} % (fold)
+\subsection{Imprimer à partir de fichiers SVG} % (fold)
 \label{sub:printing_with_svg}
 
-Whilst SVG output can be used in a range of printers, the following example shows how the file can be used with a DLP resin printer.  Using a modified version of Kliment's Printrun\footnote{\url{http://garyhodgson.com/reprap/projectlayer}} the SVG file can be loaded directly and sent to a DLP projector.  The Z axis is controlled via G-Code commands sent through the printcore component, which means that standard RepRap electronics, such as RAMPS, can be used.
+Alors que la sortie SVG peut être utilisé pour une gamme d'imprimantes, l'exemple suivant montre comment le fichier, peut être utilisé avec une imprimante résine DLP. En utilisant une version modifiée de Printrun \footnote{\url{http://garyhodgson.com/reprap/projectlayer}} le fichier SVG peut être chargé directement et envoyé à un projecteur DLP. L'axe Z est contrôlée par des commandes G-code envoyé par le composant printcore, ce qui signifie que l'électronique RepRap standard, tels que RAMPS, peuvent être utilisés.
 
 
 \begin{figure}[H]
 \centering
 \includegraphics[keepaspectratio=true,width=0.75\textwidth]{advanced/svg_output/projectlayer.png}
-\caption{Printing SVG with Projectlayer.}
+\caption{Impression SVG avec Projectlayer.}
 \label{fig:projectlayer}
 \end{figure}
 
