@@ -5,42 +5,42 @@
 \index{extruders!multiple}
 \index{extrudeuse!multiple}
 
-Une imprimante avec plus d'une extrudeuse peut être utilisé de différentes manières: L'extrudeuse supplémentaire pourrait imprimer une couleur ou une matière différente, ou pourrait être attribué à l'impression de caractéristiques particulières, telles que le remplissage, le support ou les périmètres.
+Une imprimante avec plus d'une extrudeuse peut \^etre utilis\'e de diff\'erentes mani\`eres: L'extrudeuse suppl\'ementaire pourrait imprimer une couleur ou une mati\`ere diff\'erente, ou pourrait \^etre attribu\'e \`a l'impression de caract\'eristiques particuli\`eres, telles que le remplissage, le support ou les p\'erim\`etres.
 
-L'impression multi-matières nécessite un objet conçu de manière appropriée généralement écrits au format AMF qui peut gérer plusieurs matériaux (voir les modèle de format au §\ref{sub:model_formats}).  Les détails sur la façon de créer de tel fichier sont donnés ci-dessous.
+L'impression multi-mati\`eres n\'ecessite un objet conçu de mani\`ere appropri\'ee g\'en\'eralement \'ecrits au format AMF qui peut g\'erer plusieurs mat\'eriaux (voir les mod\`ele de format au §\ref{sub:model_formats}).  Les d\'etails sur la façon de cr\'eer de tel fichier sont donn\'es ci-dessous.
 
 
 \subsection{Configurer les Extrudeuses} % (fold)
 \label{sub:configuring_extruders}
 \index{Printer Settings!General!Capabilities!Extruders}
-\index{Paramètres de l'Imprimante!Fonctionnalités!Extrudeuses}
+\index{Param\`etres de l'Imprimante!Fonctionnalit\'es!Extrudeuses}
 
-Dans l'onglet \texttt{Printer Settings} (Paramètres de l'Imprimante) il y a le paramètre \texttt{Extruders} (Extrudeuses), dans la section \texttt{Capabilities} (Fonctionnalités), ce qui permet de définir le nombre d'extrudeuses. Incrémenter cette valeur ajouter dynamiquement une autre définition d'extrudeuse dans le volet de gauche.
+Dans l'onglet \texttt{Printer Settings} (Param\`etres de l'Imprimante) il y a le param\`etre \texttt{Extruders} (Extrudeuses), dans la section \texttt{Capabilities} (Fonctionnalit\'es), ce qui permet de d\'efinir le nombre d'extrudeuses. Incr\'ementer cette valeur ajouter dynamiquement une autre d\'efinition d'extrudeuse dans le volet de gauche.
 
 \begin{figure}[H]
 \centering
 \includegraphics[keepaspectratio=true,width=1\textwidth]{expertmode/multipleextruders/printer_settings_general_multiple_extruder_options.png}
-\caption{Paramètres d'Extrudeuses Multiples - Onglet Paramètre de l'Imprimante (Général).  Notez les deux extrudeuses définies dans le volet de gauche.}
+\caption{Param\`etres d'Extrudeuses Multiples - Onglet Param\`etre de l'Imprimante (G\'en\'eral).  Notez les deux extrudeuses d\'efinies dans le volet de gauche.}
 \label{fig:printer_settings_general_multiple_extruder_options}
 \end{figure}
 
-Chaque extrudeuse peut être configuré comme d'habitude, mais il ya d'autres paramètres qui doivent être définis qui sont notamment les configurations multi-extrudeuse.
+Chaque extrudeuse peut \^etre configur\'e comme d'habitude, mais il ya d'autres param\`etres qui doivent \^etre d\'efinis qui sont notamment les configurations multi-extrudeuse.
 
 \begin{figure}[H]
 \centering
 \includegraphics[keepaspectratio=true,width=1\textwidth]{expertmode/multipleextruders/printer_settings_extruder_multiple_extruder_options.png}
-\caption{Paramètres d'Extrudeuses Multiples - Onglet Paramètre de l'Imprimante (Extruder).}
+\caption{Param\`etres d'Extrudeuses Multiples - Onglet Param\`etre de l'Imprimante (Extruder).}
 \label{fig:printer_settings_extruder_multiple_extruder_options}
 \end{figure}
 
 \index{Printer Settings!Extruder!Extruder offset}
-\index{Paramètres de l'Imprimante!Décalage de l'extrudeuse}
+\index{Param\`etres de l'Imprimante!D\'ecalage de l'extrudeuse}
 
-l'\texttt{Extruder offset} (Décalage de l'extrudeuse) doit être utilisé si le microprogramme ne gère pas le décalage de chaque buse supplémentaire. La documentation de votre micrologiciel devrait vous dire si c'est le cas. Chaque extrudeuse supplémentaire a un décalage par rapport à la première. Si le firmware le gère , toutes les compensations peuvent rester à 0,0.
+l'\texttt{Extruder offset} (D\'ecalage de l'extrudeuse) doit \^etre utilis\'e si le microprogramme ne g\`ere pas le d\'ecalage de chaque buse suppl\'ementaire. La documentation de votre micrologiciel devrait vous dire si c'est le cas. Chaque extrudeuse suppl\'ementaire a un d\'ecalage par rapport \`a la premi\`ere. Si le firmware le g\`ere , toutes les compensations peuvent rester \`a 0,0.
 
 \index{Printer Settings!Extruder!Retraction!Length}
-\index{Paramètres de l'Imprimante!Extrudeuse!Rétractation!Longueur}
-Parce que l'extrudeuse secondaire sera en sommeil tandis que la première est cours d'utilisation, et vice-versa, il est important que le matériau soit suffisamment rétractée pour cesser le suintement.  Comme avec les réglages ordinaires de rétractation (voir p. \pageref{fig:retraction_settings}) le paramètre \texttt{Length} (Longueur) est mesurée à partir du filament entrant dans l'extrudeuse.
+\index{Param\`etres de l'Imprimante!Extrudeuse!R\'etractation!Longueur}
+Parce que l'extrudeuse secondaire sera en sommeil tandis que la premi\`ere est cours d'utilisation, et vice-versa, il est important que le mat\'eriau soit suffisamment r\'etract\'ee pour cesser le suintement.  Comme avec les r\'eglages ordinaires de r\'etractation (voir p. \pageref{fig:retraction_settings}) le param\`etre \texttt{Length} (Longueur) est mesur\'ee \`a partir du filament entrant dans l'extrudeuse.
 
 % subsection configuring_extruders (end)
 
@@ -48,28 +48,28 @@ Parce que l'extrudeuse secondaire sera en sommeil tandis que la première est co
 \label{sub:assigning_filaments}
 \index{Plater}
 \index{Surface de Travail}
-Quand un profil d'imprimante avec plusieurs extrudeuses a été sélectionné, l'onglet \texttt{Plater} (Surface de Travail) permet la sélection d'un filament différent pour chaque extrudeuse.
+Quand un profil d'imprimante avec plusieurs extrudeuses a \'et\'e s\'electionn\'e, l'onglet \texttt{Plater} (Surface de Travail) permet la s\'election d'un filament diff\'erent pour chaque extrudeuse.
 
 \begin{figure}[H]
 \centering
 \includegraphics[keepaspectratio=true,width=1\textwidth]{expertmode/multipleextruders/plater_multi_filament.png}
-\caption{Surface de travail avec de multiple paramètre de filaments.}
+\caption{Surface de travail avec de multiple param\`etre de filaments.}
 \label{fig:plater_multi_filament}
 \end{figure}
 
 % subsection assigning_filaments (end)
 
-\subsection{Affectation des extrudeuses pour les objets mono-matière} % (fold)
+\subsection{Affectation des extrudeuses pour les objets mono-mati\`ere} % (fold)
 \label{sub:assigning_extruders}
 \index{Print Settings!Multiple Extruders}
-\index{Paramètres de l'Imprimante!Extrudeuse Multiple}
+\index{Param\`etres de l'Imprimante!Extrudeuse Multiple}
 
-Pour les impressions de matériaux unique, où l'extrudeuse secondaire a pour mission une extrusion particuliere, la section \texttt{Multiple Extruders} (Extrudeuses multiples) de l'onglet \texttt{Print Settings} (Paramètres de l'imprimante) donne la possibilité d'assigner une extrudeuse pour chaque type d'extrusion.
+Pour les impressions de mat\'eriaux unique, o\`u l'extrudeuse secondaire a pour mission une extrusion particuliere, la section \texttt{Multiple Extruders} (Extrudeuses multiples) de l'onglet \texttt{Print Settings} (Param\`etres de l'imprimante) donne la possibilit\'e d'assigner une extrudeuse pour chaque type d'extrusion.
 
 \begin{figure}[H]
 \centering
 \includegraphics[keepaspectratio=true,width=1\textwidth]{expertmode/multipleextruders/print_settings_multiple_extruder_options.png}
-\caption{Paramètres d'Extrudeuse Multiple - Onglet Paramètre d'Impression.}
+\caption{Param\`etres d'Extrudeuse Multiple - Onglet Param\`etre d'Impression.}
 \label{fig:advanced_multiple_extruder_options}
 \end{figure}
 
@@ -79,44 +79,44 @@ Pour les impressions de matériaux unique, où l'extrudeuse secondaire a pour mi
 \label{sub:configuring_tool_changes}
 
 \index{Printer Settings!Custom G-code!Tool change G-code}
-\index{Paramètres de l'Imprimante!G-code personalisé!G-code de changement d'outil}
+\index{Param\`etres de l'Imprimante!G-code personalis\'e!G-code de changement d'outil}
 
-La section \texttt{Custom G-code} (G-code personalisé) de l'onglet \texttt{Printer Settings} (Paramètres de l'Imprimante) dispose d'une option d'insertion de G-code entre les changements d'outils. Comme avec toutes les sections personnalisé G-code, les variables d'environement peuvent être utilisées afin de référencer les paramètres Slic3r.  Cela inclus les variables [previous\_extruder] et [next\_extruder].
+La section \texttt{Custom G-code} (G-code personalis\'e) de l'onglet \texttt{Printer Settings} (Param\`etres de l'Imprimante) dispose d'une option d'insertion de G-code entre les changements d'outils. Comme avec toutes les sections personnalis\'e G-code, les variables d'environement peuvent \^etre utilis\'ees afin de r\'ef\'erencer les param\`etres Slic3r.  Cela inclus les variables [previous\_extruder] et [next\_extruder].
 
 \begin{figure}[H]
 \centering
 \includegraphics[keepaspectratio=true,width=1\textwidth]{expertmode/multipleextruders/printer_settings_custom_gcode.png}
-\caption{Paramètres d'Extrudeuse Multiple - G-code de Changement d'outil.}
+\caption{Param\`etres d'Extrudeuse Multiple - G-code de Changement d'outil.}
 \label{fig:printer_settings_custom_gcode}
 \end{figure}
 
 % subsection configuring_tool_changes (end)
 
 
-\subsection{Impression d'objets multi-matières} % (fold)
+\subsection{Impression d'objets multi-mati\`eres} % (fold)
 \label{sub:printing_multi_material_objects}
 
-Si un fichier multi-matériaux AMF existe déjà, parce que le programme de CAO peut exporter un tel format, alors celui-ci peut être chargé dans Slic3r de façon habituelle. Le mappage entre matières de l'objet et les extrudeuses est séquentielle, c'est à dire que la premiere matière est affecté à la première extrudeuse, etc.
+Si un fichier multi-mat\'eriaux AMF existe d\'ej\`a, parce que le programme de CAO peut exporter un tel format, alors celui-ci peut \^etre charg\'e dans Slic3r de façon habituelle. Le mappage entre mati\`eres de l'objet et les extrudeuses est s\'equentielle, c'est \`a dire que la premiere mati\`ere est affect\'e \`a la premi\`ere extrudeuse, etc.
 
 % subsection printing_multi_material_objects (end)
 
 
-\subsection{Génération de fichiers AMF multi-matière} % (fold)
+\subsection{G\'en\'eration de fichiers AMF multi-mati\`ere} % (fold)
 \label{sub:generating_multi_material_amf_files}
 
-Slic3r a la capacité de combiner plusieurs fichiers STL dans un fichier multi-matière AMF.
+Slic3r a la capacit\'e de combiner plusieurs fichiers STL dans un fichier multi-mati\`ere AMF.
 
 \index{Menu!Combine multi-material STL files...}
-\index{Menu!Combiner des fichiers STL multi-matière...}
+\index{Menu!Combiner des fichiers STL multi-mati\`ere...}
 
 \begin{itemize}
-    \item Diviser la conception originale dans les différentes parties au sein du programme de CAO, et exporter chaque partie en STL.
-    \item Dans Slic3r, choisissez \texttt{Combine multi-material STL files...} (Combiner des fichiers STL multi-matière...) a partir du menu \texttt{File} (Fichier).
-    \item Lorsque vous êtes invité avec une boîte de dialogueChoisissez le premier STL, qui sera attribué à la première matière (et donc la première extrudeuse). Cliquez sur \texttt{Open} pour être invité au prochain STL, et ainsi de suite jusqu'à ce que chaque STL soit affectés à une matière. Pour signaler qu'il n'y a plus de fichiers STL, choisissez \texttt{Cancel} (Annuler).
-    \item La boîte de dialogue suivante demande l'emplacement et le nom du fichier de l'AMF.
+    \item Diviser la conception originale dans les diff\'erentes parties au sein du programme de CAO, et exporter chaque partie en STL.
+    \item Dans Slic3r, choisissez \texttt{Combine multi-material STL files...} (Combiner des fichiers STL multi-mati\`ere...) a partir du menu \texttt{File} (Fichier).
+    \item Lorsque vous \^etes invit\'e avec une bo\^ite de dialogueChoisissez le premier STL, qui sera attribu\'e \`a la premi\`ere mati\`ere (et donc la premi\`ere extrudeuse). Cliquez sur \texttt{Open} pour \^etre invit\'e au prochain STL, et ainsi de suite jusqu'\`a ce que chaque STL soit affect\'es \`a une mati\`ere. Pour signaler qu'il n'y a plus de fichiers STL, choisissez \texttt{Cancel} (Annuler).
+    \item La bo\^ite de dialogue suivante demande l'emplacement et le nom du fichier de l'AMF.
 \end{itemize}
 
-Une fois généré le fichier peut être chargé et imprimé comme décrit ci-dessus.
+Une fois g\'en\'er\'e le fichier peut \^etre charg\'e et imprim\'e comme d\'ecrit ci-dessus.
 
 % subsection generating_multi_material_amf_files (end)
 

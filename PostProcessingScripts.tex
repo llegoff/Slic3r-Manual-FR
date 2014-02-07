@@ -6,11 +6,11 @@
 \index{post processing}
 \index{post-traitement}
 
-Il peut y avoir des moments o\`u le G-Code g\'en\'er\'e par Slic3r doit \^etre modifi\'e ou modifi\'e apr\`es qu'il a \'et\'e cr\'e\'e. Pour cette raison, il existe la possibilit\'e d'ex\'ecuter des scripts dans le cadre des derni\`eres \'etapes dans le processus de tranchage\footnote{\url{https://github.com/alexrj/Slic3r/wiki/Writing-post-processing-scripts}}.
+Il peut y avoir des moments o\`u le G-Code g\'en\'er\'e par Slic3r doit \^etre modifi\'e ou modifi\'e apr\`es qu'il ai \'et\'e cr\'e\'e. Pour cette raison, il existe la possibilit\'e d'ex\'ecuter des scripts dans le cadre des derni\`eres \'etapes dans le processus de tranchage\footnote{\url{https://github.com/alexrj/Slic3r/wiki/Writing-post-processing-scripts}}.
 
 \index{Print Settings!Output options!Post-processing scripts}
 \index{Param\`etres d'Impression!Param\`etres de sortie!Scripts de post-traitement}
-Dans la section \texttt{Output options} (param\`etres de sortie) de l'onglet \texttt{Print Settings} (Param\`etres d'Impression), se trouve l'option \texttt{Post-processing scripts} (Scripts de post-traitement).  Le chemin d'acc\`es absolu de chaque script peut \^etre ajout\'e, s\'epar\'es par des points-virgules. Chaque scripts doit \^etre reconnus par le syst\`eme h\^ote, et \^etre ex\'ecutable.
+Dans la section \texttt{Output options} (param\`etres de sortie) de l'onglet \texttt{Print Settings} (Param\`etres d'Impression), se trouve l'option \texttt{Post-processing scripts} (Scripts de post-traitement).  Le chemin d'acc\`es absolu de chaque script peut \^etre ajout\'e, s\'epar\'e par des points-virgules. Chaque script doit \^etre reconnu par le syst\`eme h\^ote, et \^etre ex\'ecutable.
 
 \begin{figure}[H]
 \centering
@@ -19,7 +19,7 @@ Dans la section \texttt{Output options} (param\`etres de sortie) de l'onglet \te
 \label{fig:post_processing_scripts_options}
 \end{figure}
 
-Chaque script sera pass\'e par le chemin absolu du fichier G-code que Slic3r g\'en\`ere. Toutes les options de configuration Slic3r sont mis \`a la disposition des scripts par des variables d'environnement.  Ils commence tous par \texttt{SLIC3R\_}.  Le script suivant \'ecrira toutes les options Slic3r sur la sortie standard:
+Chaque script sera pass\'e par le chemin absolu du fichier G-code que Slic3r g\'en\`ere. Toutes les options de configuration Slic3r sont mis \`a la disposition des scripts par des variables d'environnement.  Ils commencent tous par \texttt{SLIC3R\_}.  Le script suivant \'ecrira toutes les options Slic3r sur la sortie standard:
 
 \begin{figure}[H]
 \small

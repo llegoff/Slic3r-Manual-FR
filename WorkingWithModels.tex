@@ -4,7 +4,7 @@
 \index{models}
 \index{mod\`eles 3D}
 
-Il reste encore une \'etape avant la prmi\`ere impression: obtenir un mod\`ele 3D et le "trancher".
+Il reste encore une \'etape avant la premi\`ere impression: obtenir un mod\`ele 3D et le "trancher".
 
 \subsection{Formats de Mod\`eles 3D} % (fold)
 \label{sub:model_formats}
@@ -17,7 +17,7 @@ Slic3r accepte les types de fichiers suivants.
 \begin{itemize}
 	\item Les fichiers ST\'er\'eolithographique (STL) peuvent provenir d'une grande vari\'et\'e de sources et sont maintenant un standard de facto dans l'impression 3D. Les fichiers d\'ecrivent simplement la g\'eom\'etrie de la surface d'un objet 3D sans aucune information suppl\'ementaire (comme la couleur ou la mati\`ere), et c'est cette simplicit\'e qui a probablement fait le format omnipr\'esent.
 	\item Le type de fichier Wavefront OBJ est un format ouvert utilis\'e \`a l'origine dans une application d'animation de Wavefront Technologies, mais a depuis \'et\'e adopt\'ee par la communaut\'e de la mod\'elisation 3D. Il est similaire au format STL.
-	\item Le format de fichier AMF (Additive Manufacturing File Format) a \'et\'e d\'evelopp\'e en r\'eponse au caract\`ere limit\'e du format STL. En plus de d\'ecrire la g\'eom\'etrie du mod\`ele 3D, il peut \'egalement d\'ecrire les couleurs et les mat\'eriaux, ainsi que des attributs plus complexes, tels que les m\'elanges d\'egrad\'e et de multiples arrangements d'objets (constellations). Alors que le format est consid\'er\'e comme un standard, il reste \`a \^etre largement adopt\'ee dans le milieu de la machine 3D.
+	\item Le format de fichier AMF (Additive Manufacturing File Format) a \'et\'e d\'evelopp\'e en r\'eponse au caract\`ere limit\'e du format STL. En plus de d\'ecrire la g\'eom\'etrie du mod\`ele 3D, il peut \'egalement d\'ecrire les couleurs et les mat\'eriaux, ainsi que des attributs plus complexes, tels que les m\'elanges d\'egrad\'es et de multiples arrangements d'objets (constellations). Alors que le format est consid\'er\'e comme un standard, il reste \`a \^etre largement adopt\'ee dans le milieu de la machine 3D.
 \end{itemize}
 % subsection model_formats (end)
 
@@ -54,7 +54,7 @@ Slic3r dispose d'un outil, appel\'e Plater, qui permet \`a un ou plusieurs mod\`
 \end{figure}
 
 
-Une fois que vous avez acquis un mod\`ele, faites-le glisser sur l'onglet "Plater" (ou utilisez le bouton Add(Ajouter) dans le coin supp\'erieur gauche) pour le charger dans Slic3r. Dans la figure ci-dessous, la traditionnelle RepRap Minimug\footnote{\url{http://www.thingiverse.com/thing:18357}} is loaded, and is viewed from above. The ring around the model is a skirt - a single perimeter, several millimeters away from the model, which is extruded first.  This is useful in making sure the plastic is flowing smoothly from the nozzle when the model is starting to be printed.
+Une fois que vous avez acquis un mod\`ele, faites-le glisser sur l'onglet "Plater" (ou utilisez le bouton Add(Ajouter) dans le coin supp\'erieur gauche) pour le charger dans Slic3r. Dans la figure ci-dessous, la traditionnelle Minimug RepRap\footnote{\url{http://www.thingiverse.com/thing:18357}} est chargé, et est vu de dessus. L'anneau autour du modèle est une jupe - un seul périmètre, à quelques millimètres du modèle, qui est extrudé en premier. Ceci est utile pour s'assurer que la matière plastique est fluide à partir de la buse lorsque le modèle commence à être imprimée.
 
 \begin{figure}[H]
 \centering
@@ -97,6 +97,6 @@ Les boutons en haut \`a gauche, vous permettent d'ajouter, de supprimer, d'auto-
 \label{sub:cleaning_stls}
 \index{STL!cleaning}
 \index{STL!r\'eparer}
-Si le maillage 3D d\'ecrit dans le mod\`ele contient des trous, ou les bords ne sont pas align\'es (connu comme \'etant non-manifold), puis Slic3r peut avoir des probl\`emes pour le traiter. Slic3r va tenter de r\'esoudre les probl\`emesqu'il peut, mais certains probl\`emes sont hors de sa port\'ee. Si l'application se plaint que le mod\`ele ne peut pas \^etre "tranch\'e" correctement alors il ya plusieurs options possibles: voir le chapitre sur la R\'eparation des mod\`eles.
+Si le maillage 3D d\'ecrit dans le mod\`ele contient des trous, ou les bords ne sont pas align\'es (connu comme \'etant non-manifold), Slic3r peut avoir des probl\`emes pour le traiter. Slic3r va tenter de r\'esoudre les probl\`emes, mais certains probl\`emes sont hors de sa port\'ee. Si l'application se plaint que le mod\`ele ne peut pas \^etre "tranch\'e" correctement alors il ya plusieurs options possibles: voir le chapitre sur la R\'eparation des mod\`eles.
 
 % subsection cleaning_stls (end)
