@@ -4,7 +4,7 @@
 \index{simple mode}
 \index{mode simple}
 
-Slic3r a deux modes de fonctionnement, Simple et Expert. Ceux-ci peuvent \^etre choisis \`a partir de la fen\^etre \texttt{Prefer\'ences} (qui se trouve dans le menu  \texttt{File} (fichier) ).
+Slic3r a deux modes de fonctionnement, Simple et Expert. Ceux-ci peuvent \^etre choisis \`a partir de la fen\^etre \texttt{Preferences} (qui se trouve dans le menu  \texttt{File} (fichier) ).
 
 \begin{figure}[ht]
 \centering
@@ -37,11 +37,11 @@ offre la possibilit\'e de modifier les param\`etres li\'es \`a l'impression r\'e
 \texttt{Layer height} (\'epaisseur de couche) d\'efinit le d\'eplacement sur l'axe vertical avant l'extrusion d'une nouvelle couche.  Il y a plusieurs facteurs qui influentsur la hauteur que la couche doit avoir:
 \begin{itemize}
 	\item \textbf{R\'esolution D\'esir\'ee}  - Une faible hauteur de couche devrait conduire \`a des impressions avec des nervures ou des bandes moins visibles, comme chaque couche est plus petite. L'esth\'etique joue ici un r\^ole, mais aussi le type de mod\`ele, par exemple, une pi\`ece m\'ecanique peut ne pas avoir besoin d'une telle finition haute r\'esolution, alors qu'une pi\`ece de pr\'esentation peut en avoir besoin.
-	\item \textbf{Vitesse d'impression}  - Les couches plus fines produiront des impression lisses, mais chaque impression prendra plus de temps, tout simplement parce que l'extrudeuse doit tracer le motif plusieurs fois. Un des buts plus tard sera de trouver un \'equilibre entre la hauteur de couche, la vitesse de l'imprimante, et la qualit\'e de l'impression qui en r\'esulte.
+	\item \textbf{Vitesse d'impression}  - Les couches plus fines produiront des impression lisses, mais chaque impression prendra plus de temps, tout simplement parce que l'extrudeuse doit tracer le motif plusieurs fois. Un des ojectifs, plus tard, sera de trouver un \'equilibre entre la hauteur de couche, la vitesse de l'imprimante, et la qualit\'e de l'impression qui en r\'esulte.
 \end{itemize}
 \index{Print Settings!Perimeters}
 \index{Param\`etres d'Impression!P\'erim\`etres}
-\texttt{Perimeters} (P\'erimetres) d\'efinit le nombre minimum de coquilles verticales (c'est \`a dire les murs) que l'impression aura. \`a moins que le mod\`ele ne n\'ecessite qu'un seul mur, il est g\'en\'eralement recommand\'e d'avoir un minimum de deux p\'erim\`etres car cela donne l'assurance que si une partie du p\'erim\`etre ne s'imprime pas correctement alors le second p\'erim\`etre permettra le de couvrir.
+\texttt{Perimeters} (P\'erim\`etres) d\'efinit le nombre minimum de coquilles verticales (c'est \`a dire les murs) que l'impression aura. \`a moins que le mod\`ele ne n\'ecessite qu'un seul mur, il est g\'en\'eralement recommand\'e d'avoir un minimum de deux p\'erim\`etres car cela donne l'assurance que si une partie du p\'erim\`etre ne s'imprime pas correctement alors le second p\'erim\`etre permettra le de couvrir.
 
 \index{Print Settings!Solid layers}
 \index{Param\`etres d'Impression!Couches pleines}
@@ -239,7 +239,7 @@ Une valeur comprise entre 1 et 2 mm est habituellement recommand\'e. Extrudeuses
 R\'egler le param\`etre \texttt{Lift Z} (El\'evation Z) \`a une valeur positive rel\`evera l'extrudeuse sur l'axe Z de ce nombre de millim\`etres durant chaque d\'eplacement. Cela peut \^etre utile pour s'assurer que la buse n'accroche pas la couche pr\'ecedente, mais cette valeur n'est g\'en\'eralement pas n\'ecessaire et ralentit la vitesse d'impression. Une valeur de 0,1 mm est g\'en\'eralement suffisante.
 % paragraph retraction (end)
 
-\paragraph{Start, End and Layer Chance G-codes. (G-code de d\'ebut et de fin)} % (fold)
+\paragraph{Start, End and Layer Chance G-codes. (G-code de d\'ebut, de fin et de changement de couche)} % (fold)
 \label{par:start_end_g_code}
 \index{Printer Settings!Custom G-code!Start G-code}
 \index{Param\`etres de l'Imprimante!G-code personalis\'e!G-code de d\'emarrage}
