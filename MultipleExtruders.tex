@@ -1,6 +1,6 @@
 %!TEX root = Slic3r-Manual.tex
 
-\section{Extrudeuse Multiples} % (fold)
+\section{Extrudeuse Multiple} % (fold)
 \label{sec:multiple_extruders}
 \index{extruders!multiple}
 \index{extrudeuse!multiple}
@@ -24,7 +24,7 @@ Dans l'onglet \texttt{Printer Settings} (Param\`etres de l'Imprimante) il y a le
 \label{fig:printer_settings_general_multiple_extruder_options}
 \end{figure}
 
-Chaque extrudeuse peut \^etre configur\'e comme d'habitude, mais il ya d'autres param\`etres qui doivent \^etre d\'efinis qui sont notamment les configurations multi-extrudeuse.
+Chaque extrudeuse peut \^etre configur\'e comme d'habitude, mais il y a d'autres param\`etres qui doivent \^etre d\'efinis qui sont notamment les configurations multi-extrudeuse.
 
 \begin{figure}[H]
 \centering
@@ -36,11 +36,11 @@ Chaque extrudeuse peut \^etre configur\'e comme d'habitude, mais il ya d'autres 
 \index{Printer Settings!Extruder!Extruder offset}
 \index{Param\`etres de l'Imprimante!D\'ecalage de l'extrudeuse}
 
-l'\texttt{Extruder offset} (D\'ecalage de l'extrudeuse) doit \^etre utilis\'e si le microprogramme ne g\`ere pas le d\'ecalage de chaque buse suppl\'ementaire. La documentation de votre micrologiciel devrait vous dire si c'est le cas. Chaque extrudeuse suppl\'ementaire a un d\'ecalage par rapport \`a la premi\`ere. Si le firmware le g\`ere , toutes les compensations peuvent rester \`a 0,0.
+l'\texttt{Extruder offset} (D\'ecalage de l'extrudeuse) doit \^etre utilis\'e si le microprogramme ne g\`ere pas le d\'ecalage de chaque buse suppl\'ementaire. La documentation de votre micrologiciel devrait vous dire si c'est le cas. Chaque extrudeuse suppl\'ementaire a un d\'ecalage par rapport \`a la premi\`ere. Si le firmware le g\`ere, toutes les compensations peuvent rester \`a 0,0.
 
 \index{Printer Settings!Extruder!Retraction!Length}
 \index{Param\`etres de l'Imprimante!Extrudeuse!R\'etractation!Longueur}
-Parce que l'extrudeuse secondaire sera en sommeil tandis que la premi\`ere est cours d'utilisation, et vice-versa, il est important que le mat\'eriau soit suffisamment r\'etract\'ee pour cesser le suintement.  Comme avec les r\'eglages ordinaires de r\'etractation (voir p. \pageref{fig:retraction_settings}) le param\`etre \texttt{Length} (Longueur) est mesur\'ee \`a partir du filament entrant dans l'extrudeuse.
+Parce que l'extrudeuse secondaire sera en sommeil tandis que la premi\`ere est cours d'utilisation, et vice-versa, il est important que le mat\'eriau soit suffisamment r\'etract\'e pour cesser le suintement.  Comme avec les r\'eglages ordinaires de r\'etractation (voir p. \pageref{fig:retraction_settings}) le param\`etre \texttt{Length} (Longueur) est mesur\'e \`a partir du filament entrant dans l'extrudeuse.
 
 % subsection configuring_extruders (end)
 
@@ -79,9 +79,9 @@ Pour les impressions de mat\'eriaux unique, o\`u l'extrudeuse secondaire a pour 
 \label{sub:configuring_tool_changes}
 
 \index{Printer Settings!Custom G-code!Tool change G-code}
-\index{Param\`etres de l'Imprimante!G-code personalis\'e!G-code de changement d'outil}
+\index{Param\`etres de l'Imprimante!G-code personnalis\'e!G-code de changement d'outil}
 
-La section \texttt{Custom G-code} (G-code personalis\'e) de l'onglet \texttt{Printer Settings} (Param\`etres de l'Imprimante) dispose d'une option d'insertion de G-code entre les changements d'outils. Comme avec toutes les sections personnalis\'e G-code, les variables d'environement peuvent \^etre utilis\'ees afin de r\'ef\'erencer les param\`etres Slic3r.  Cela inclus les variables [previous\_extruder] et [next\_extruder].
+La section \texttt{Custom G-code} (G-code personnalis\'e) de l'onglet \texttt{Printer Settings} (Param\`etres de l'Imprimante) dispose d'une option d'insertion de G-code entre les changements d'outils. Comme avec toutes les sections personnalis\'e G-code, les variables d'environement peuvent \^etre utilis\'ees afin de r\'ef\'erencer les param\`etres Slic3r.  Cela inclus les variables [previous\_extruder] et [next\_extruder].
 
 \begin{figure}[H]
 \centering
@@ -111,7 +111,7 @@ Slic3r a la capacit\'e de combiner plusieurs fichiers STL dans un fichier multi-
 
 \begin{itemize}
     \item Diviser la conception originale dans les diff\'erentes parties au sein du programme de CAO, et exporter chaque partie en STL.
-    \item Dans Slic3r, choisissez \texttt{Combine multi-material STL files...} (Combiner des fichiers STL multi-mati\`ere...) a partir du menu \texttt{File} (Fichier).
+    \item Dans Slic3r, choisissez \texttt{Combine multi-material STL files...} (Combiner des fichiers STL multi-mati\`ere...) \`a partir du menu \texttt{File} (Fichier).
     \item Lorsque vous \^etes invit\'e avec une bo\^ite de dialogueChoisissez le premier STL, qui sera attribu\'e \`a la premi\`ere mati\`ere (et donc la premi\`ere extrudeuse). Cliquez sur \texttt{Open} pour \^etre invit\'e au prochain STL, et ainsi de suite jusqu'\`a ce que chaque STL soit affect\'es \`a une mati\`ere. Pour signaler qu'il n'y a plus de fichiers STL, choisissez \texttt{Cancel} (Annuler).
     \item La bo\^ite de dialogue suivante demande l'emplacement et le nom du fichier de l'AMF.
 \end{itemize}

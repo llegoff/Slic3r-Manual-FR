@@ -10,7 +10,7 @@ Il peut y avoir des moments o\`u le G-Code g\'en\'er\'e par Slic3r doit \^etre m
 
 \index{Print Settings!Output options!Post-processing scripts}
 \index{Param\`etres d'Impression!Param\`etres de sortie!Scripts de post-traitement}
-Dans la section \texttt{Output options} (param\`etres de sortie) de l'onglet \texttt{Print Settings} (Param\`etres d'Impression), se trouve l'option \texttt{Post-processing scripts} (Scripts de post-traitement).  Le chemin d'acc\`es absolu de chaque script peut \^etre ajout\'e, s\'epar\'e par des points-virgules. Chaque script doit \^etre reconnu par le syst\`eme h\^ote, et \^etre ex\'ecutable.
+Dans la section \texttt{Output options} (param\`etres de sortie) de l'onglet \texttt{Print Settings} (Param\`etres d'Impression), se trouve l'option \texttt{Post-processing scripts} (Scripts de post-traitement).  Le chemin d'acc\`es absolu de chaque script peut \^etre ajout\'e, s\'epar\'e par des points-virgules. Chaque script doit \^etre reconnu par le syst\`eme h\^ote et \^etre ex\'ecutable.
 
 \begin{figure}[H]
 \centering
@@ -19,7 +19,7 @@ Dans la section \texttt{Output options} (param\`etres de sortie) de l'onglet \te
 \label{fig:post_processing_scripts_options}
 \end{figure}
 
-Chaque script sera pass\'e par le chemin absolu du fichier G-code que Slic3r g\'en\`ere. Toutes les options de configuration Slic3r sont mis \`a la disposition des scripts par des variables d'environnement.  Ils commencent tous par \texttt{SLIC3R\_}.  Le script suivant \'ecrira toutes les options Slic3r sur la sortie standard:
+Chaque script sera pass\'e par le chemin absolu du fichier G-code que Slic3r g\'en\`ere. Toutes les options de configuration Slic3r sont mises \`a la disposition des scripts par des variables d'environnement.  Ils commencent tous par \texttt{SLIC3R\_}.  Le script suivant \'ecrira toutes les options Slic3r sur la sortie standard:
 
 \begin{figure}[H]
 \small
@@ -28,14 +28,14 @@ Chaque script sera pass\'e par le chemin absolu du fichier G-code que Slic3r g\'
         echo "Post-processing G-code file: $*"
         env | grep ^SLIC3R
 \end{verbatim}
-\caption{Example de script de post-traitement qui affiche les variables d'environment Slic3r.}
+\caption{Exemple de script de post-traitement qui affiche les variables d'environment Slic3r.}
 \label{fig:exaple_post_processing_script_env_vars}
 \end{figure}
 
 Des exemples de scripts peuvent \^etre trouv\'es dans le d\'ep\^ot GitHub\footnote{\url{https://github.com/alexrj/Slic3r/tree/master/utils/post-processing}}.
 
 
-le mode "Perl's in-place" (\texttt{perl -i})facilite la modifiction du contenu du fichier G-code, sans avoir \`a copier, modifier, remplacer l'original. L'exemple suivant va simplement afficher le contenu sur la sortie standard:
+le mode "Perl's in-place" (\texttt{perl -i})facilite la modification du contenu du fichier G-code, sans avoir \`a copier, modifier et remplacer l'original. L'exemple suivant va simplement afficher le contenu sur la sortie standard:
 
 \begin{figure}[H]
 \small
@@ -49,7 +49,7 @@ le mode "Perl's in-place" (\texttt{perl -i})facilite la modifiction du contenu d
              print;
         }
 \end{verbatim}
-\caption{Example de script de post-traitement qui affiche chaque ligne sur la sortie standard.}
+\caption{Exemple de script de post-traitement qui affiche chaque ligne sur la sortie standard.}
 \label{fig:exaple_post_processing_script_print_lines}
 \end{figure}
 

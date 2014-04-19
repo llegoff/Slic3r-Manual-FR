@@ -1,6 +1,6 @@
 %!TEX root = Slic3r-Manual.tex
 
-Si le maillage 3D d\'ecrit dans le mod\`ele contient des trous, ou les bords ne sont pas align\'es (connu comme \'etant non-manifold), alors Slic3r peut avoir des probl\`emes de traitement . Slic3r va tenter de r\'esoudre les probl\`emes, s'il le peut, mais certains probl\`emes sont hors de sa port\'ee. Si l'application indique que le mod\`ele ne peut pas \^etre tranch\'e correctement alors il ya plusieurs options disponibles, et celles d\'ecrites ici sont tous libres au moment de l'\'ecriture.
+Si le maillage 3D d\'ecrit dans le mod\`ele contient des trous, ou les bords ne sont pas align\'es (connu comme \'etant non-manifold), alors Slic3r peut avoir des probl\`emes de traitement . Slic3r va tenter de r\'esoudre les probl\`emes, s'il le peut, mais certains probl\`emes sont hors de sa port\'ee. Si l'application indique que le mod\`ele ne peut pas \^etre tranch\'e correctement alors il y a plusieurs options disponibles, et celles d\'ecrites ici sont toutes libres au moment de l'\'ecriture.
 
 %%% CONFIGURATION TUNING %%%
 {\input{WorkingWithModelsNetfabb}}
@@ -24,8 +24,8 @@ Freecad\footnote{\url{http://sourceforge.net/projects/free-cad}} est un logiciel
 	\item Chargez le mod\`ele en le faisant glisser sur l'espace de travail ou par l'interm\'ediaire du menu \texttt{File}.  Un petit message dans le coin en bas \`a gauche indique si le mod\`ele semble avoir des probl\`emes.
 	\item Dans le menu choisissez \texttt{Meshes->Analyze->Evaluate \& Repair mesh} pour faire appara\^itre la bo\^ite de dialogue des options de r\'eparation.
 	\item Dans la bo\^ite de dialogue choisir la maille charg\'ee, puis effectuer chaque analyse soit en cliquant sur le bouton \texttt{Analyze} par type de probl\`eme, ou s\'electionnez \texttt{Repetitive Repair} en bas pour effectuer tous les contr\^oles. Si un probl\`eme  correspondant est d\'etect\'e le bouton \texttt{Repair} devient actif.
-	\item Pour chaque r\'eparation souhait\'e frapp\'e le bouton \texttt{Repair}.
-	\item Il est important d'examiner l'effet que le script de r\'eparation a apport\'ees au mod\`ele.  Il se peut que le script produise des dommages dans le fichier, plut\^ot que de le r\'eparer, par exemple en retirant triangles importants.
+	\item Pour chaque r\'eparation souhait\'e frapper le bouton \texttt{Repair}.
+	\item Il est important d'examiner l'effet que le script de r\'eparation a apport\'e au mod\`ele.  Il se peut que le script produise des dommages dans le fichier, plut\^ot que de le r\'eparer, par exemple en retirant des triangles importants.
 	\item Exporter le mod\`ele r\'epar\'e par le menu \texttt{Export} ou le menu contextuel.
 \end{itemize}
 % paragraph freecad (end)
