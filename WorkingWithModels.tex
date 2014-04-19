@@ -12,7 +12,7 @@ Il reste encore une \'etape avant la premi\`ere impression: obtenir un mod\`ele 
 \index{AMF}
 \index{OBJ}
 
-Slic3r accepte les types de fichiers suivants.
+Slic3r accepte les types de fichiers suivants :
 
 \begin{itemize}
 	\item Les fichiers ST\'er\'eolithographique (STL) peuvent provenir d'une grande vari\'et\'e de sources et sont maintenant un standard de facto dans l'impression 3D. Les fichiers d\'ecrivent simplement la g\'eom\'etrie de la surface d'un objet 3D sans aucune information suppl\'ementaire (comme la couleur ou la mati\`ere), et c'est cette simplicit\'e qui a probablement fait le format omnipr\'esent.
@@ -26,9 +26,9 @@ Slic3r accepte les types de fichiers suivants.
 \index{models!finding}
 \index{mod\`eles!trouver}
 
-Les fichiers de mod\`ele 3D peuvent provenir d'un d\'ep\^ot en ligne, tels que Thingiverse\footnote{\url{http://www.thingiverse.com}} ou GrabCAD\footnote{\url{http://grabcad.com}}, ou \^etre cr\'e\'ee \`a partir d'un programme de CAO, comme FreeCAD\footnote{\url{http://sourceforge.net/projects/free-cad}}, Sketchup\footnote{\url{http://www.sketchup.com}}, ou OpenSCAD\footnote{\url{http://www.openscad.org}}, ou un outil de CAO en ligne tels que Shapesmith\footnote{\url{http://shapesmith.net}}.
+Les fichiers de mod\`ele 3D peuvent provenir d'un d\'ep\^ot en ligne, tels que Thingiverse\footnote{\url{http://www.thingiverse.com}} ou GrabCAD\footnote{\url{http://grabcad.com}}, ou \^etre cr\'e\'es \`a partir d'un programme de CAO, comme FreeCAD\footnote{\url{http://sourceforge.net/projects/free-cad}}, Sketchup\footnote{\url{http://www.sketchup.com}}, ou OpenSCAD\footnote{\url{http://www.openscad.org}}, ou un outil de CAO en ligne tels que Shapesmith\footnote{\url{http://shapesmith.net}}.
 
-Vous souhaitez peut-\^etre afficher les fichiers avant de trancher et il ya beaucoup d'applications disponibles, dont l'un est Meshlab\footnote{\url{http://www.meshlab.org}} - un outil complet pour la visualisation et la manipulation des fichiers 3D.
+Vous souhaitez peut-\^etre afficher les fichiers avant de trancher et il y a beaucoup d'applications disponibles, dont l'un est Meshlab\footnote{\url{http://www.meshlab.org}} - un outil complet pour la visualisation et la manipulation des fichiers 3D.
 
 \begin{figure}[H]
 \centering
@@ -44,7 +44,7 @@ Vous souhaitez peut-\^etre afficher les fichiers avant de trancher et il ya beau
 \label{sub:working_with_plater}
 \index{Plater}
 \index{Surface de Travail}
-Slic3r dispose d'un outil, appel\'e Plater, qui permet \`a un ou plusieurs mod\`eles \`a \^etre charg\'es et dispos\'es avant d'\^etre "tranch\'es".
+Slic3r dispose d'un outil, appel\'e Plater, qui permet \`a un ou plusieurs mod\`eles d'\^etre charg\'es et dispos\'es avant d'\^etre "tranch\'es".
 
 \begin{figure}[H]
 \centering
@@ -54,7 +54,7 @@ Slic3r dispose d'un outil, appel\'e Plater, qui permet \`a un ou plusieurs mod\`
 \end{figure}
 
 
-Une fois que vous avez acquis un mod\`ele, faites-le glisser sur l'onglet "Plater" (ou utilisez le bouton Add(Ajouter) dans le coin supp\'erieur gauche) pour le charger dans Slic3r. Dans la figure ci-dessous, la traditionnelle Minimug RepRap\footnote{\url{http://www.thingiverse.com/thing:18357}} est chargé, et est vu de dessus. L'anneau autour du modèle est une jupe - un seul périmètre, à quelques millimètres du modèle, qui est extrudé en premier. Ceci est utile pour s'assurer que la matière plastique est fluide à partir de la buse lorsque le modèle commence à être imprimée.
+Une fois que vous avez acquis un mod\`ele, faites-le glisser sur l'onglet "Plater" (ou utilisez le bouton Add(Ajouter) dans le coin sup\'erieur gauche) pour le charger dans Slic3r. Dans la figure ci-dessous, la traditionnelle Minimug RepRap\footnote{\url{http://www.thingiverse.com/thing:18357}} est chargée, et est vue de dessus. L'anneau autour du modèle est une jupe - un seul périmètre, à quelques millimètres du modèle, qui est extrudé en premier. Ceci est utile pour s'assurer que la matière plastique est fluide à partir de la buse lorsque le modèle commence à être imprimé.
 
 \begin{figure}[H]
 \centering
@@ -70,7 +70,7 @@ Une fois que vous avez acquis un mod\`ele, faites-le glisser sur l'onglet "Plate
 \label{fig:plater_model_loaded}
 \end{figure}
 
-Le mod\`ele peut \^etre repositionn\'ee en le d\'eplaçant sur la repr\`esentation du lit \`a gauche de l'\'ecran. Notez que les dimensions du lit doivent correspondre \`a votre imprimante, tel qu'elles sont donn\'ees lors de la configuration initiale ci-dessus.
+Le mod\`ele peut \^etre repositionn\'e en le d\'eplaçant sur la repr\'esentation du lit \`a gauche de l'\'ecran. Notez que les dimensions du lit doivent correspondre \`a votre imprimante, telles qu'elles sont donn\'ees lors de la configuration initiale ci-dessus.
 
 Sur le c\^ot\'e droit il y a la liste des fichiers actuellement charg\'es. Les boutons situ\'es en haut de la liste de fichier vous permettent d'organiser les mod\`eles.
 \begin{itemize}
@@ -97,6 +97,6 @@ Les boutons en haut \`a gauche, vous permettent d'ajouter, de supprimer, d'auto-
 \label{sub:cleaning_stls}
 \index{STL!cleaning}
 \index{STL!r\'eparer}
-Si le maillage 3D d\'ecrit dans le mod\`ele contient des trous, ou les bords ne sont pas align\'es (connu comme \'etant non-manifold), Slic3r peut avoir des probl\`emes pour le traiter. Slic3r va tenter de r\'esoudre les probl\`emes, mais certains probl\`emes sont hors de sa port\'ee. Si l'application se plaint que le mod\`ele ne peut pas \^etre "tranch\'e" correctement alors il ya plusieurs options possibles: voir le chapitre sur la R\'eparation des mod\`eles.
+Si le maillage 3D d\'ecrit dans le mod\`ele contient des trous, ou les bords ne sont pas align\'es (connu comme \'etant non-manifold), Slic3r peut avoir des probl\`emes pour le traiter. Slic3r va tenter de r\'esoudre les probl\`emes, mais certains probl\`emes sont hors de sa port\'ee. Si l'application se plaint que le mod\`ele ne peut pas \^etre "tranch\'e" correctement alors il y a plusieurs options possibles: voir le chapitre sur la R\'eparation des mod\`eles.
 
 % subsection cleaning_stls (end)

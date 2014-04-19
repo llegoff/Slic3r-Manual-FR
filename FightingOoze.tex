@@ -8,9 +8,9 @@
 \index{retractation}
 
 
-\`a moins que le mat\'eriau en cours d'extrusion ait une viscosit\'e tr\`es \'elev\'ee, il va suinter de la buse entre les deux extrusions. Il ya plusieurs param\`etres dans Slic3r qui peuvent aider \`a y rem\'edier.
+\`a moins que le mat\'eriau en cours d'extrusion ait une viscosit\'e tr\`es \'elev\'ee, il va suinter de la buse entre les deux extrusions. Il y a plusieurs param\`etres dans Slic3r qui peuvent aider \`a y rem\'edier.
 
-Les param\`etre de retractation, de l'onglet \texttt{Printer} (Imprimante),indiquer \`a l'imprimante de retirer le filament entre les mouvements d'extrusion. Cela peut r\'eduire la pression dans la buse, ce qui r\'eduit suintement. Apr\`es un d\'eplacement, la r\'etractation est invers\'e pour pr\'eparer l'extrudeuse pour la prochaine extrusion.
+Les param\`etres de retractation, de l'onglet \texttt{Printer} (Imprimante) indiquent \`a l'imprimante de retirer le filament entre les mouvements d'extrusion. Cela peut r\'eduire la pression dans la buse, ce qui r\'eduit suintement. Apr\`es un d\'eplacement, la r\'etractation est invers\'e pour pr\'eparer l'extrudeuse pour la prochaine extrusion.
 
 \begin{figure}[H]
 \centering
@@ -34,8 +34,8 @@ Les param\`etre de retractation, de l'onglet \texttt{Printer} (Imprimante),indiq
 \index{Param\`etre de l'Imprimante!Extrudeuse!R\'etractation!Essuyer avant r\'etractation}
 
 \begin{itemize}
-    \item \texttt{Length} (Longueur) - Le nombre de millim\`etres \`a r\'etracter. A noter que la mesure est effectu\'ee \`a partir du filament brut entrant dans l'extrudeuse. Une valeur comprise entre 1 et 2 mm est habituellement recommand\'e. Extrudeuses d\'eport\'ee peuvent avoir besoin de 4 ou 5 mm en raison de l'hyst\'er\'esis introduit par le tube.
-    \item \texttt{Lift Z} (Lever Z) - Soul\`eve l' extrudeuse sur l'axe Z de quelque millim\`etres pendant chaque d\'eplacement. Cela peut \^etre utile pour s'assurer que la buse n'accroche pas un filament d\'ej\`a d\'epos\'e, mais ceci n'est g\'en\'eralement pas n\'ecessaire et ralentit la vitesse d'impression. Une valeur de 0,1 mm est g\'en\'eralement suffisante.
+    \item \texttt{Length} (Longueur) - Le nombre de millim\`etres \`a r\'etracter. A noter que la mesure est effectu\'ee \`a partir du filament brut entrant dans l'extrudeuse. Une valeur comprise entre 1 et 2 mm est habituellement recommand\'e. Les extrudeuses d\'eport\'ees peuvent avoir besoin de 4 ou 5 mm en raison de l'hyst\'er\'esis introduit par le tube.
+    \item \texttt{Lift Z} (Lever Z) - Soul\`eve l' extrudeuse sur l'axe Z de quelques millim\`etres pendant chaque d\'eplacement. Cela peut \^etre utile pour s'assurer que la buse n'accroche pas un filament d\'ej\`a d\'epos\'e, mais ceci n'est g\'en\'eralement pas n\'ecessaire et ralentit la vitesse d'impression. Une valeur de 0,1 mm est g\'en\'eralement suffisante.
     \item \texttt{Speed} (Vitesse) - La vitesse \`a laquelle le moteur de l'extrudeuse va retirer le filament. La valeur doit \^etre d\'efinie \`a une vitesse que l'extrudeuse peut g\'erer sans sauter des pas, et il est int\'eressant d'exp\'erimenter plusieurs valeurs pour trouver le retrait le plus rapide possible.
     \item \texttt{Extra length on restart} (Longueur suppl\'ementaire au red\'emarrage) -  Ajoute une longueur suppl\'ementaire de fil apr\`es que le retrait soit compens\'e \`a la fin du d\'eplacement. Ce param\`etre est rarement utilis\'e, mais il le doit, si l'impression montrent des signes de manque de mati\`ere apr\`es la fin du d\'eplacement, alors il peut \^etre utile d'ajouter une petite quantit\'e de mati\`ere suppl\'ementaire.
     \item \texttt{Minimum travel after retraction} (D\'eplacement minimum apr\`es r\'etractation) - D\'eclenchement d'une r\'etractation apr\`es des mouvements tr\`es courts est g\'en\'eralement inutile, car la quantit\'e de suintement est g\'en\'eralement n\'egligeable et il ralentit le temps d'impression.  D\'efinis le nombre de millim\`etres minimum que la buse peut parcourir avant d'envisager une r\'etractation.  Si l'imprimante g\'ere bien le suintement cette valeur peut \^etre augment\'ee \`a 5 ou 6 mm.
@@ -44,11 +44,11 @@ Les param\`etre de retractation, de l'onglet \texttt{Printer} (Imprimante),indiq
 \end{itemize}
 
 
-En outre, il ya plusieurs param\`etres dans l'onglet \texttt{Print Settings} (Param\`ete de l'Imprimante) qui peuvent aider \`a contr\^oler le suintement.
+En outre, il y a plusieurs param\`etres dans l'onglet \texttt{Print Settings} (Param\`ete de l'Imprimante) qui peuvent aider \`a contr\^oler le suintement.
 
 \begin{itemize}
     \index{Print Settings!Infill!Advanced!Only retract when crossing perimeters}
-	\index{Param\`etres d'Impression!Remplissage!Advanc\'e!Retrait seulement lors du croisement avec uns p\'erim\`etre}
+	\index{Param\`etres d'Impression!Remplissage!Advanc\'e!Retrait seulement lors du croisement avec un p\'erim\`etre}
     \item \texttt{Only retract when crossing perimeters} , Retrait seulement lors du croisement avec uns p\'erim\`etre (Infill - Advanced) (Remplissage - Avanc\'e) - Indique \`a Slic3r de ne r\'etracter que si la buse traverse le bord de l'\^ile qui vient d' \^etre extrud\'ee. De l\'eger suintement dans les murs d'une pi\`ece ne sont pas perçus et peuvent g\'en\'eralement \^etre accept\'ee.
     \index{Print Settings!Layers and perimeters!Quality!Avoid crossing perimeters}
     \index{Param\`etres d'Impression!Couches et p\'erim\`etres!Qualit\'e!Evitez de croiser les p\'erim\`etres}
@@ -59,5 +59,5 @@ En outre, il ya plusieurs param\`etres dans l'onglet \texttt{Print Settings} (Pa
 \end{itemize}
 
 
-Voir aussi la section \ref{par:sequential_printing}: Impression S\'equentielle, pour une autre technique qui peut minimiser ficelles se formant entre les objets.
+Voir aussi la section \ref{par:sequential_printing}: Impression S\'equentielle, pour une autre technique qui peut minimiser les ficelles se formant entre les objets.
 % section fighting_ooze (end)

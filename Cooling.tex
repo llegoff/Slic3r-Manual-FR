@@ -6,7 +6,7 @@
 \index{refroidissement}
 \index{temperature}
 
-La temp\'erature joue un r\^ole cl\'e dans la d\'etermination de la qualit\'e d'impression. Trop de chaleur produit des d\'eformation du mod\`ele, pas assez de chaleur pose des probl\`eme d'adh\'esion de la couche. L'application d'un refroidissement permettra au mat\'eriau fra\^ichement d\'epos\'e de se solidifier suffisament pour fournir une bonne base pour la couche suivante, aidant \`a la tenue des surplombs, des petits d\'etails et des ponts.
+La temp\'erature joue un r\^ole cl\'e dans la d\'etermination de la qualit\'e d'impression. Trop de chaleur produit des d\'eformation du mod\`ele, pas assez de chaleur pose des probl\`emes d'adh\'esion de la couche. L'application d'un refroidissement permettra au mat\'eriau fra\^ichement d\'epos\'e de se solidifier suffisament pour fournir une bonne base pour la couche suivante, aidant \`a la tenue des surplombs, des petits d\'etails et des ponts.
 
 Il existe deux techniques principales pour le refroidissement: l'ajout d'un ventilateur, et ralentir la vitesse d'impression. Slic3r peut choisir d'utiliser les deux techniques, en utilisant d'abord un ventilateur, puis le ralentissement de l'impression si le temps de d\'epot de la couche est trop court.
 
@@ -17,17 +17,17 @@ Il existe deux techniques principales pour le refroidissement: l'ajout d'un vent
 \label{fig:cooling_chart}
 \end{figure}
 
-La figure \ref{fig:cooling_chart} montre la strat\'egie adopt\'ee par Slic3r. La lecture se fait de droite \`a gauche, lorsque le seuil minimum du ventilateur (\#2) est atteint, le ventilateur, est activ\'e. Ceci augmente en intensit\'e \`a mesure que le temps de d\'epot de la couche diminue. La vitesse d'impression reste constante jusqu'\`a ce que le temps estim\'e d'impression descende au-dessous d'un certain seuil (\#1), c'est le moment o\`u la vitesse d'impression est r\'eduite jusqu'\`a ce qu'elle atteigne sa valeur minimale.
+La figure \ref{fig:cooling_chart} montre la strat\'egie adopt\'ee par Slic3r. La lecture se fait de droite \`a gauche, lorsque le seuil minimum du ventilateur (\#2) est atteint, le ventilateur est activ\'e. Ceci augmente en intensit\'e \`a mesure que le temps de d\'epot de la couche diminue. La vitesse d'impression reste constante jusqu'\`a ce que le temps estim\'e d'impression descende au-dessous d'un certain seuil (\#1), c'est le moment o\`u la vitesse d'impression est r\'eduite jusqu'\`a ce qu'elle atteigne sa valeur minimale.
 
 \subsection{Ventilateurs} % (fold)
 \label{sub:fans}
 \index{cooling!fans}
 \index{refroidissement!ventilateurs}
-La plupart des cartes \'electroniques et firmware permettent l'ajout de ventilateurs, via un connecteur disponnible. Ceux-ci peuvent ensuite \^etre pilot\'e avec le G-code, de Slic3r, pour activer ou d\'esactiver lorsque le mod\`ele le n\'ecessite, et de tourner \`a des vitesses diff\'erentes.
+La plupart des cartes \'electroniques et firmware permettent l'ajout de ventilateurs, via un connecteur disponible. Ceux-ci peuvent ensuite \^etre pilot\'e avec le G-code, de Slic3r, pour activer ou d\'esactiver lorsque le mod\`ele le n\'ecessite, et de tourner \`a des vitesses diff\'erentes.
 
 Des pr\'ecautions doivent \^etre prises avec le positionnement du ventilateur de sorte qu'il ne refroidisse pas de lit chauff\'e plus que n\'ecessaire. Il convient \'egalement de ne pas refroidir le bloc chauffant de la t\^ete afin de d\'eviter le gaspillage d'\'energie. Le mouvement de l'air devrait viser la pointe de la buse, o\`u coule sur le produit fra\^ichement extrud\'e.
 
-Un conduit peut aider \`a guider le flux correctement, et il ya plusieurs mod\`eles disponibles en ligne, pour une grande vari\'et\'e d'imprimantes.
+Un conduit peut aider \`a guider le flux correctement, et il y a plusieurs mod\`eles disponibles en ligne, pour une grande vari\'et\'e d'imprimantes.
 
 % subsection fans (end)
 
@@ -43,7 +43,7 @@ Attention, l'effet escompt\'e pourrait \^etre att\'enu\'e par le fait que la bus
 \subsection{Configuration} % (fold)
 \label{sub:configuring_cooling}
 
-En mode simple Slic3r tentera de choisir les param\`etres optimaux pour les ventilateur et la vitesse. Le mode expert donne plus d'options fines.
+En mode simple Slic3r tentera de choisir les param\`etres optimaux pour les ventilateurs et la vitesse. Le mode expert donne plus d'options fines.
 
 \begin{figure}[H]
 \centering
