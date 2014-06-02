@@ -53,6 +53,16 @@ En mode simple Slic3r tentera de choisir les param\`etres optimaux pour les vent
 \end{figure}
 
 \begin{itemize}
+    \index{Filament Settings!Cooling!Cooling!Keep fan always on}
+	\index{Param\`etres du Filament!Refroidissement!Garder le ventilateur allum\'e}
+	\item \texttt{Keep Fan always on} (Garder le ventilateur allum\'e) - Si cette option est activ\'ee, le ventilateur ne sera jamais d\'esactiv\'ee et sera maintenu en marche au moins \`a sa vitesse minimum. Utile pour PLA, nuisible pour l'ABS.
+    \index{Filament Settings!Cooling!Enable auto cooling}
+	\index{Param\`etres du Filament!Refroidissement!Activer le refroidissement automatique}
+	\item \texttt{Enable auto cooling} (Activer le refroidissement automatique) - Cela active / d\'esactive la logique de refroidissement. Un texte descriptif au dessous explique les effets de la configuration actuelle.
+\end{itemize}
+
+
+\begin{itemize}
     \index{Filament Settings!Cooling!Fan speed}
 	\index{Param\`etres du Filament!Refroidissement!Vitesse du ventilateur}
 	\item \texttt{Fan speed} (Vitesse du ventilateur) - D\'etermine la vitesse minimum et maximum - utile pour les ventilateurs qui vont trop vite par d\'efaut.
@@ -62,9 +72,6 @@ En mode simple Slic3r tentera de choisir les param\`etres optimaux pour les vent
     \index{Filament Settings!Cooling!Disable fan for first n layers}
 	\index{Param\`etres du Filament!Refroidissement!D\'esactiver le ventilateur pour les n 1ere couches}
 	\item \texttt{Disable fan for first \textit{n} layers} (D\'esactiver le ventilateur pour les \textit{n} 1ere couches) - La section \ref{sec:the_important_first_layer} montre l'importance de la premi\`ere couche , il est donc logique de ne pas appliquer le ventilateur jusqu'\`a ce que l'impression soit solidement fix\'e au lit. Garder le ventilateur \'eteint pendant les deux ou trois premi\`eres couches est une bonne id\'ee.
-    \index{Filament Settings!Cooling!Keep fan always on}
-	\index{Param\`etres du Filament!Refroidissement!Garder le ventilateur allum\'e}
-	\item \texttt{Keep fan always on} (Garder le ventilateur allum\'e) - Remplace tous les autres choix et force le ventilateur \`a fonctionner continuellement, au moins \`a la vitesse minimum. Cela peut \^etre utile lors de l'impression du PLA, mais n'est pas recommand\'e pour l'ABS ..
 \end{itemize}
 
 \begin{itemize}
