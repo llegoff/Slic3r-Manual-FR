@@ -1,12 +1,13 @@
 %!TEX root = Slic3r-Manual.tex
 
-\section{Contour} % (fold)
+\section{Contour et Bordure} % (fold)
 \label{sec:skirt}
 \index{skirt}
 \index{contour}
 \index{Print Settings!Skirt and brim!Skirt}
 \index{Param\`etres d'Impression!Contour et bordure!Contour}
 
+\paragraph{Contour. (skirt)} % (fold)
 Le param\`etre \texttt{Skirt} (Contour) ajoute une extrusion \`a une courte distance du perim\`etre de l'objet. Ceci peut faire en sorte que le mat\'eriau sorte de l'extrudeuse correctement, avant de commencer sur le mod\`ele correspondant.
 
 \begin{figure}[H]
@@ -30,5 +31,23 @@ Le param\`etre \texttt{Skirt} (Contour) ajoute une extrusion \`a une courte dist
 	\index{Param\`etres d'Impression!Contour et bordure!Contour!Longueur minimum d'extrusion}
     \item \texttt{Minimum extrusion length} - Indique le nombre minimum de millim\`etres que le contour doit avoir, si la boucle autour de l'objet ne suffit pas.
 \end{itemize}
+% paragraph skirt (end)
+
+\paragraph{Bordure. (Brim)} % (fold)
+\label{par:expert_brim}
+\index{Print Settings!Brim}
+\index{Param\`etres d'Impression!Bordure}
+\index{Print Settings!Brim!Brim width}
+\index{Param\`etres d'Impression!Bordure!Largeur de bordure}
+\texttt{Brim width} (largeur de bordure) est utilis\'e pour ajouter plus de p\'erim\`etres \`a la premi\`ere couche, en tant base suppl\'ementaire, afin de fournir une plus grande surface pour que l'impression colle au lit , afin de r\'eduire les d\'eformation (voir §\ref{sec:the_important_first_layer}). Le bord est ensuite d\'ecoup\'ee une fois que l'impression est termin\'ee et retir\'ee du lit.
+\begin{figure}[H]
+\centering
+\includegraphics[keepaspectratio=true,width=1.0\textwidth]{expertmode/brim_settings.png}
+\caption{Param\`etres de contour.}
+\label{fig:brim_settings}
+\end{figure}
+
+% paragraph brim (end)
+
 
 % section skirt (end)

@@ -53,11 +53,15 @@ En outre, il y a plusieurs param\`etres dans l'onglet \texttt{Print Settings} (P
     \index{Print Settings!Layers and perimeters!Quality!Avoid crossing perimeters}
     \index{Param\`etres d'Impression!Couches et p\'erim\`etres!Qualit\'e!Evitez de croiser les p\'erim\`etres}
 	\item \texttt{Avoid crossing perimeters} , Evitez de croiser les p\'erim\`etres (Layers and perimeters - Quality) (Couches et p\'erim\`etres - Qualit\'e) - Forcera la buse \`a suivre les p\'erim\`etres autant que possible afin de minimiser le nombre de fois o\`u il doit les traverser en se d\'eplaçant, et entre les \^iles. Cela a un impact n\'egatif \`a la fois sur la g\'en\'eration G-code et le temps d'impression.
-    \index{Print Settings!Layers and perimeters!Advanced!Randomize starting points}
-    \index{Param\`etres d'Impression!Couches et p\'erim\`etres!Avanc\'e!Points de d\'epart al\'eatoire}
-	\item \texttt{Randomize starting points} , Points de d\'epart al\'eatoire (Layers and perimeters - Advanced) (Couches et p\'erim\`etre - Avanc\'e) - Comme l'extrudeuse se d\'eplace vers le haut pour le d\'ebut de la couche suivante, tout suintement peut entra\^iner des des gouttes. Si le m\^eme point de d\'epart est utilis\'ee pour chaque couche puis une couture peut se former le long de l'objet. Ce r\'eglage d\'eplacera le point de d\'epart \`a un emplacement diff\'erent pour chaque couche.
+    \index{Print Settings!Layers and perimeters!Advanced!Seam position}
+    \index{Param\`etres d'Impression!Couches et p\'erim\`etres!Advanc\'e!Position du joint}
+	\item \texttt{Seam position} , Position du joint (Layers and perimeters - Advanced) (Couches et p\'erim\`etre - Advanc\'e) - Ce param\`etre d\'etermine le point de boucles p\'erim\'etriques , et donc la position de la couture verticale potentiellement visible sur le c\^ot\'e de l'objet. Les options disponibles sont:
+    \begin{itemize}
+        \item \texttt{Ramdom} (Al\'eatoire) - Ceci choisira un point différent pour chaque couche, ce qui rend le joint moins perceptible.
+		\item \texttt{Nearest} (Le plus proche) - Ceci essayera de choisir un sommet en retrait concave de sorte que le joint soit caché à l'intérieur de l'angle concave. Si aucun sommet en retrait concaves n'est disponible, il choisira un sommet en retrait convexe. Si aucun n'est disponible, il choisira un sommet en retrait. Le choix parmi les candidats est opéré de telle sorte que le point de départ est le plus proche de la position précédente de l'extrudeuse. Donc, cette option permet d'optimiser des voyages courts.
+		\item \texttt{Aligned} (Aligné) - Cela utilisera la même logique que {Nearest} pour trouver les candidats, mais il va choisir celui qui est le plus proche du point de départ de la couche précédente. Cela permettra d'assurer le joint est surtout aligné tout au long de la totalité de l'objet.
+	\end{itemize}
 \end{itemize}
-
 
 Voir aussi la section \ref{par:sequential_printing}: Impression S\'equentielle, pour une autre technique qui peut minimiser les ficelles se formant entre les objets.
 % section fighting_ooze (end)

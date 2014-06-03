@@ -5,9 +5,7 @@
 \index{extruders!multiple}
 \index{extrudeuse!multiple}
 
-Une imprimante avec plus d'une extrudeuse peut \^etre utilis\'e de diff\'erentes mani\`eres: L'extrudeuse suppl\'ementaire pourrait imprimer une couleur ou une mati\`ere diff\'erente, ou pourrait \^etre attribu\'e \`a l'impression de caract\'eristiques particuli\`eres, telles que le remplissage, le support ou les p\'erim\`etres.
-
-L'impression multi-mati\`eres n\'ecessite un objet conçu de mani\`ere appropri\'ee g\'en\'eralement \'ecrits au format AMF qui peut g\'erer plusieurs mat\'eriaux (voir les mod\`ele de format au §\ref{sub:model_formats}).  Les d\'etails sur la façon de cr\'eer de tel fichier sont donn\'es ci-dessous.
+Une imprimante avec plus d'une extrudeuse peut \^etre utilis\'e de diff\'erentes mani\`eres. Si vous avez un modèle multi-partie, qui définit des régions distinctes, vous pouvez assigner chacun d'eux à une extrudeuse. Si vous avez un modèle de pièce unique, vous pouvez attribuer des rôles différents à chaque extrudeuse: par exemple, vous pouvez remblayer l'aide d'une grosse buse ou vous pouvez construire matériau support avec filament soluble
 
 
 \subsection{Configurer les Extrudeuses} % (fold)
@@ -36,7 +34,7 @@ Chaque extrudeuse peut \^etre configur\'e comme d'habitude, mais il y a d'autres
 \index{Printer Settings!Extruder!Extruder offset}
 \index{Param\`etres de l'Imprimante!D\'ecalage de l'extrudeuse}
 
-l'\texttt{Extruder offset} (D\'ecalage de l'extrudeuse) doit \^etre utilis\'e si le microprogramme ne g\`ere pas le d\'ecalage de chaque buse suppl\'ementaire. La documentation de votre micrologiciel devrait vous dire si c'est le cas. Chaque extrudeuse suppl\'ementaire a un d\'ecalage par rapport \`a la premi\`ere. Si le firmware le g\`ere, toutes les compensations peuvent rester \`a 0,0.
+l'\texttt{Extruder offset} (D\'ecalage de l'extrudeuse) doit \^etre utilis\'e si le microprogramme ne g\`ere pas le d\'ecalage de chaque buse suppl\'ementaire. La documentation de votre micrologiciel devrait vous dire si c'est le cas. Chaque extrudeuse suppl\'ementaire a un d\'ecalage par rapport \`a la premi\`ere (qui a généralement 0,0). Si le firmware le g\`ere, toutes les compensations peuvent rester \`a 0,0.
 
 \index{Printer Settings!Extruder!Retraction!Length}
 \index{Param\`etres de l'Imprimante!Extrudeuse!R\'etractation!Longueur}
